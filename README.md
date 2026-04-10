@@ -1,7 +1,7 @@
 # DAT4CCIÓN 2026 — Dashboard Cuidado No Remunerado
 ## Análisis territorial del trabajo no remunerado en 4 países de América Latina
 
-**Equipo:** Yovany Romero Ramos · Shirley Sosa · Glisse Lisbeth Jorge Malca · Sihomara Ochoa
+**Equipo:** Yovany Romero Ramos · Shirley Sosa · Glisse Lisbeth Jorge Malca · Sihomara Ochoa    
 **Evento:** DAT4CCIÓN 2026 · ONU Mujeres América Latina y el Caribe
 
 ---
