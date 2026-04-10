@@ -1,6 +1,4 @@
 /* ─── GLOBAL STYLES — DAT4CCIÓN 2026 ───────────────────────────────────── */
-/* Sobreescribe el fondo oscuro del template Angular por defecto            */
-
 *,
 *::before,
 *::after {
@@ -9,20 +7,43 @@
   padding: 0;
 }
 
+// 🎨 Paleta de colores Dataacción 2026
+$color-hours-low: #F9D5B4;      // Menos de 20 hrs/sem (naranja muy claro)
+$color-hours-mid-low: #F4A261;  // 20–28 hrs/sem (naranja suave)
+$color-hours-mid: #E76F51;      // 29–36 hrs/sem (naranja intenso)
+$color-hours-mid-high: #D35400; // 37–44 hrs/sem (naranja oscuro)
+$color-hours-high: #8C3A2B;     // 45–52 hrs/sem (marrón rojizo)
+$color-hours-very-high: #5A2C23;// Más de 52 hrs/sem (marrón profundo)
+
+// 🌈 Paleta general
+$palette-background: #F5F0ED;
+$palette-primary: #E76F51;
+$palette-secondary: #D35400;
+$palette-accent: #8C3A2B;
+$palette-dark: #5A2C23;
+$palette-card-bg: #FFFFFF;
+$palette-text-dark: #1A0F0A;
+$palette-text-light: #5A4A3E;
+
 html,
 body {
   height: 100%;
-  background: #F5F0ED;   /* warm cream — overrides any dark default */
-  color: #1A0F0A;
+  background: $palette-background;
+  color: $palette-text-dark;
   font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
-/* Scrollbar global warm */
-::-webkit-scrollbar       { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: #EDE8E4; }
-::-webkit-scrollbar-thumb { background: rgba(193,68,14,.30); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(193,68,14,.50); }
+/* Scrollbar warm */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #EDE8E4; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(193, 68, 14, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(193, 68, 14, 0.5); }
 
 /* Quitar outline azul de botones */
-button:focus-visible { outline: 2px solid #C1440E; outline-offset: 2px; }
-button { font-family: inherit; }
+button:focus-visible { outline: 2px solid $palette-secondary; outline-offset: 2px; }
+button { font-family: inherit; cursor: pointer; }
+
+/* Utilidades */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 1rem; }
+.mb-2 { margin-bottom: 1rem; }

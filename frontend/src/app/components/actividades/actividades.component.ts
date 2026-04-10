@@ -32,14 +32,14 @@ export class ActividadesComponent implements OnInit {
   }
   
   cargarPaises() {
-    this.actividadesService.getPaisesDisponibles().subscribe(paises => {
-      this.paisesDisponibles = paises;
-      if (this.paisesDisponibles.length > 0) {
-        this.paisSeleccionado = this.paisesDisponibles[0];
-        this.cargarActividades();
-      }
-    });
-  }
+  this.actividadesService.getPaisesDisponibles().subscribe(paises => {
+    this.paisesDisponibles = paises;
+    if (this.paisesDisponibles.length > 0) {
+      this.paisSeleccionado = this.paisesDisponibles[0];
+      this.cargarActividades();
+    }
+  });
+}
   
   cargarActividades() {
     this.actividadesService.getActividadesPorPais(this.paisSeleccionado).subscribe(data => {

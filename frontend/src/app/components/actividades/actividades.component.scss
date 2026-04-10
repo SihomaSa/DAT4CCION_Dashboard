@@ -1,3 +1,19 @@
+// 🎨 Paleta de colores Dataacción 2026 (definida localmente)
+$color-hours-low: #F9D5B4;
+$color-hours-mid-low: #F4A261;
+$color-hours-mid: #E76F51;
+$color-hours-mid-high: #D35400;
+$color-hours-high: #8C3A2B;
+$color-hours-very-high: #5A2C23;
+
+$palette-background: #F5F0ED;
+$palette-primary: #E76F51;
+$palette-secondary: #D35400;
+$palette-accent: #8C3A2B;
+$palette-dark: #5A2C23;
+$palette-text-dark: #1A0F0A;
+$palette-text-light: #5A4A3E;
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -31,7 +47,7 @@
   align-items: center;
   padding: 20px 24px;
   border-bottom: 1px solid #e0e0e0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, $palette-primary 0%, $palette-secondary 100%);
   
   h2 {
     margin: 0;
@@ -64,6 +80,7 @@
   flex: 1;
   overflow-y: auto;
   padding: 24px;
+  background: $palette-background;
 }
 
 .filtros-actividades {
@@ -72,8 +89,9 @@
   gap: 20px;
   margin-bottom: 30px;
   padding: 16px;
-  background: #f8f9fa;
+  background: white;
   border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   
   .filtro-group {
     display: flex;
@@ -82,7 +100,7 @@
     
     label {
       font-weight: 600;
-      color: #2c3e50;
+      color: $palette-text-dark;
     }
     
     select {
@@ -91,6 +109,9 @@
       border-radius: 8px;
       background: white;
       cursor: pointer;
+      &:hover {
+        border-color: $palette-primary;
+      }
     }
   }
 }
@@ -98,6 +119,7 @@
 .button-group {
   display: flex;
   gap: 8px;
+  background: $palette-background;
   
   button {
     padding: 8px 16px;
@@ -107,14 +129,17 @@
     cursor: pointer;
     transition: all 0.3s;
     font-weight: 500;
+    color: $palette-text-light;
     
     &:hover {
       transform: translateY(-2px);
+      background: $color-hours-low;
     }
     
     &.active {
-      background: #667eea;
-      border-color: #667eea;
+      background: $palette-primary;
+      border-color: $palette-primary;
+      box-shadow: 0 2px 6px rgba($palette-primary, 0.3);
       color: white;
     }
   }
@@ -129,7 +154,7 @@
   .stat-card {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, $palette-primary 0%, $palette-secondary 100%);
     border-radius: 12px;
     color: white;
     
@@ -149,12 +174,12 @@
 .chart-container {
   h3 {
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: $palette-dark;
     font-size: 1.3rem;
   }
   
   .subtitle {
-    color: #7f8c8d;
+    color: $palette-text-light;
     font-size: 13px;
     margin-bottom: 20px;
   }
@@ -167,16 +192,17 @@
     .bar-label {
       font-size: 13px;
       margin-bottom: 6px;
-      color: #2c3e50;
+      color: $palette-text-dark;
       font-weight: 500;
     }
     
     .bar-wrapper {
-      background: #e0e0e0;
+      background: #e8e0d8;
       border-radius: 8px;
       overflow: hidden;
       height: 36px;
       position: relative;
+     
     }
     
     .bar-fill {
@@ -187,12 +213,13 @@
       justify-content: flex-end;
       padding-right: 12px;
       transition: width 0.5s ease;
-      
+      background-color:#8C3A2B !important;
       .bar-value {
         color: white;
         font-size: 13px;
         font-weight: 600;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        
       }
     }
   }
@@ -204,7 +231,7 @@
     padding-left: 12px;
     
     &.negative {
-      background-color: #1f77b4 !important;
+      background-color: #4a90c4 !important;
       justify-content: flex-end;
       padding-right: 12px;
       padding-left: 0;
@@ -219,7 +246,7 @@
   
   .categoria-card {
     background: white;
-    border: 1px solid #e0e0e0;
+    border: 1px solid rgba($palette-primary, 0.1);
     border-radius: 12px;
     padding: 20px;
     transition: all 0.3s;
@@ -231,7 +258,7 @@
     
     h4 {
       margin: 0 0 16px 0;
-      color: #2c3e50;
+      color: $palette-dark;
       font-size: 1.2rem;
     }
     
@@ -244,15 +271,15 @@
         margin-bottom: 8px;
         
         .stat-label {
-          color: #7f8c8d;
+          color: $palette-text-light;
         }
         
         .stat-value {
           font-weight: 600;
-          color: #2c3e50;
+          color: $palette-dark;
           
           &.positive {
-            color: #d62728;
+             color: $palette-primary;
           }
         }
       }
@@ -270,11 +297,11 @@
         transition: width 0.5s ease;
         
         &.mujeres {
-          background-color: #d62728;
+           background-color: $palette-primary;
         }
         
         &.hombres {
-          background-color: #1f77b4;
+          background-color: $palette-secondary;
         }
       }
     }
@@ -293,11 +320,11 @@
         margin-right: 6px;
         
         &.mujeres-dot {
-          background-color: #d62728;
+          background-color: $palette-primary;
         }
         
         &.hombres-dot {
-          background-color: #1f77b4;
+          background-color: $palette-secondary;
         }
       }
     }
@@ -350,7 +377,8 @@
   min-width: 150px;
   
   &:hover {
-    border-color: #667eea;
+    border-color: $palette-primary;
+   
   }
 }
 
