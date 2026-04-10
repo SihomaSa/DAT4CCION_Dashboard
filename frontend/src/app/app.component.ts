@@ -73,6 +73,7 @@ export class AppComponent implements OnInit {
     if (horas.length === 0) return 0;
     return horas.reduce((a, b) => a + b, 0) / horas.length;
   }
+
   abrirAnalisisActividades() {
     this.actividadesModalVisible = true;
   }

@@ -20,7 +20,7 @@ L.Marker.prototype.options.icon = iconDefault;
 
 @Component({
   selector: 'app-mapa',
-  template: '<div id="map" style="height: 100%; width: 100%; border-radius: 12px;"></div>',
+  template: '<div id="map" style="height: 100%; width: 100%; border-radius: 6px;"></div>',
   styles: [`
     :host {
       display: block;
@@ -173,11 +173,17 @@ export class MapaComponent implements AfterViewInit, OnChanges {
           `;
         }
         
-        circle.bindPopup(popupContent);
+        circle.bindPopup(popupContent, {
+          closeButton: false,
+          autoClose: false,
+          closeOnClick: false
+        });
         
-        circle.bindTooltip(`${unidad.nombre}: ${horas.toFixed(1)} hrs/sem`, {
-          permanent: false,
-          direction: 'top'
+        circle.on('mouseover', () => {
+          circle.openPopup();
+        });
+        circle.on('mouseout', () => {
+          circle.closePopup();
         });
         
         // En Latam, al hacer clic cambiar a ese país
@@ -186,10 +192,6 @@ export class MapaComponent implements AfterViewInit, OnChanges {
             // Emitir evento para cambiar el país (lo manejaremos en app.component)
             const event = new CustomEvent('cambiarPais', { detail: unidad.pais });
             window.dispatchEvent(event);
-          });
-          circle.bindTooltip(`${unidad.nombre}: ${horas.toFixed(1)} hrs/sem (clic para explorar)`, {
-            permanent: false,
-            direction: 'top'
           });
         }
         

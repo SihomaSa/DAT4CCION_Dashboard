@@ -45,13 +45,52 @@
     </div>
   </div>
 
-  <!-- Mapa - Contenedor más grande -->
-  <div *ngIf="!cargando" class="mapa-container">
-    <app-mapa 
-      [pais]="paisSeleccionado"
-      [sexo]="sexoSeleccionado"
-      [datos]="datosUnidades">
-    </app-mapa>
+  <div *ngIf="!cargando" class="mapa-layout">
+    <div class="mapa-column">
+      <div class="mapa-container">
+        <app-mapa 
+          [pais]="paisSeleccionado"
+          [sexo]="sexoSeleccionado"
+          [datos]="datosUnidades">
+        </app-mapa>
+      </div>
+    </div>
+
+    <div class="datos-column">
+      <div class="panel-datos">
+        <div class="panel-label">PANEL DE DATOS</div>
+        <h2 class="panel-title">Carga de trabajo no remunerado</h2>
+        <p class="panel-description">
+          Horas semanales promedio dedicadas al trabajo de cuidado no remunerado por mujeres de 15 años a más.
+        </p>
+
+        <div class="panel-card">
+          <div class="card-label">Ciudad</div>
+          <div class="card-value">{{ paisSeleccionado === 'Latam' ? 'Latinoamérica' : paisSeleccionado }}</div>
+        </div>
+
+        <div class="panel-card">
+          <div class="card-label">Horas semanales - {{ sexoSeleccionado === 'mujeres' ? 'Mujeres' : 'Hombres' }}</div>
+          <div class="card-value">{{ calcularPromedio() | number:'1.1-1' }} hrs</div>
+        </div>
+
+        <div class="panel-card">
+          <div class="card-label">Hrs/sem - Promedio</div>
+          <div class="card-progress">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <span class="progress-text">{{ calcularPromedio() | number:'1.1-1' }} hrs</span>
+          </div>
+        </div>
+
+        <div *ngIf="paisSeleccionado === 'Latam'" class="panel-card panel-note">
+          <div class="card-label">Países disponibles</div>
+          <div class="card-value">{{ datosUnidades.length }}</div>
+          <div class="card-note">Perú, Colombia, Uruguay, México, Chile</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Leyenda -->
@@ -88,19 +127,6 @@
     <div class="leyenda-item">
       <div class="color-box" style="background-color: #8B0000;"></div>
       <span>Más de 60 hrs</span>
-    </div>
-  </div>
-
-  <!-- Resumen -->
-  <div *ngIf="!cargando" class="stats-resumen">
-    <div class="stat-card" *ngIf="paisSeleccionado !== 'Latam'">
-      <div class="stat-label">Promedio {{ paisSeleccionado }}</div>
-      <div class="stat-value">{{ calcularPromedio() | number:'1.1-1' }} hrs/sem</div>
-    </div>
-    <div class="stat-card" *ngIf="paisSeleccionado === 'Latam'">
-      <div class="stat-label">Países disponibles</div>
-      <div class="stat-value">{{ datosUnidades.length }}</div>
-      <div class="stat-sub">Perú, Colombia, Uruguay, México, Chile</div>
     </div>
   </div>
 </div>
