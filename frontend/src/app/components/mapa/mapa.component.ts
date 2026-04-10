@@ -122,7 +122,7 @@ export class MapaComponent implements AfterViewInit, OnChanges {
         ">
           <!-- Cabecera naranja -->
           <div style="
-            background: #C1440E;
+            background: #1f2937;
             padding: 10px 14px 8px;
           ">
             <div style="
