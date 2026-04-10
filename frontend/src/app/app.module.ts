@@ -6,17 +6,19 @@ import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MapaComponent } from './components/mapa/mapa.component';
+import { ActividadesComponent } from './components/actividades/actividades.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapaComponent  // ← Declarar el componente del mapa
+    MapaComponent,
+    ActividadesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule,    // ← Para ngModel
-    CommonModule    // ← Para pipes como number
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

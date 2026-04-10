@@ -1,0 +1,60 @@
+﻿codigo,actividad,mujeres_hrs_sem,hombres_hrs_sem,diferencia
+J4_58,Bañar y asear,22.44,16.96,5.48
+C13,Limpiar la vivienda,7.93,2.65,5.28
+J1_38,Cuidado de personas con enfermedad,7.91,3.11,4.8
+J1_33,Cuidado de niños 6-12 años,7.67,2.68,4.99
+B10,Preparar alimentos y bebidas,5.75,2.52,3.22
+B11,Servir alimentos y limpiar lugar donde se comió,3.1,1.58,1.52
+J4_62,Jugar y conversar,2.82,1.09,1.72
+D15,Mantenimiento y reparaciones menores,2.44,0.63,1.81
+E17,Compras del hogar,2.17,1.95,0.22
+J5_68,Cuidado de adultos 18-64 años (permanente),2.11,1.19,0.92
+I22,Traslados por trabajo no remunerado,2.07,3.55,-1.48
+J4_61,Levantar y acostar,1.87,1.57,0.3
+J4_63,Estar pendiente,1.63,1.36,0.27
+C14,Limpiar ropa y calzado,1.57,1.5,0.06
+J5_71,Apoyo emocional,1.32,1.9,-0.58
+M_90,Voluntariado en actividades religiosas,1.32,0.49,0.82
+J2_47,Estar pendiente de familiares,1.29,0.7,0.59
+J2_42,Apoyo en tareas escolares,1.0,0.19,0.81
+J4_60,Dar de comer,0.98,0.71,0.27
+I24,Traslados por cuidado,0.9,0.6,0.31
+J4_59,Vestir y arreglar,0.82,0.68,0.14
+M_91,Voluntariado en otras áreas,0.82,0.49,0.34
+J2_44,Acompañar a centros educativos,0.64,0.02,0.62
+K_76,Mantenimiento para otros hogares,0.58,0.78,-0.2
+K_74,Apoyo escolar para otros hogares,0.56,0.25,0.31
+K_75,Acompañamiento para otros hogares,0.46,0.18,0.28
+H21,Traslados por actividades del hogar,0.45,0.41,0.04
+J3_54,Cuidado de adultos mayores 65+ años (detallado),0.44,0.25,0.19
+K_72,Quehaceres domésticos para otros hogares,0.41,0.18,0.23
+F19,Organización y supervisión del hogar,0.38,0.55,-0.17
+J3_56,Cuidado de personas con enfermedad (detallado),0.36,0.29,0.08
+J2_43,Asistir a reuniones escolares,0.36,0.09,0.27
+E18,Pagos y trámites del hogar,0.33,0.14,0.19
+J1_34,Cuidado de adolescentes 13-17 años,0.3,0.01,0.29
+J5_70,Cuidado de personas con enfermedad (permanente),0.25,0.92,-0.67
+J3_50,Cuidado de niños 0-5 años (detallado),0.24,0.11,0.13
+D16,Construcción y reparaciones mayores,0.23,0.18,0.05
+M_88,Voluntariado en educación,0.23,0.05,0.18
+J3_51,Cuidado de niños 6-12 años (detallado),0.21,0.07,0.15
+M_87,Voluntariado en salud,0.18,0.22,-0.04
+G20,Cuidado de mascotas y plantas,0.16,0.89,-0.73
+J1_32,Cuidado de niños 0-5 años,0.13,0.14,-0.01
+J5_65,Cuidado de niños 0-5 años (permanente),0.11,0.04,0.07
+K_73,Cuidado de personas para otros hogares,0.1,0.1,-0.0
+J3_52,Cuidado de adolescentes 13-17 años (detallado),0.1,0.04,0.06
+J3_53,Cuidado de adultos 18-64 años (detallado),0.06,0.03,0.04
+J5_66,Cuidado de niños 6-12 años (permanente),0.06,0.01,0.05
+J1_35,Cuidado de adultos 18-64 años,0.05,0.02,0.03
+J5_72,Traslados por cuidado,0.04,0.05,-0.01
+J5_67,Cuidado de adolescentes 13-17 años (permanente),0.04,0.01,0.03
+J1_36,Cuidado de adultos mayores 65+ años,0.04,0.01,0.03
+J5_69,Cuidado de personas con discapacidad (permanente),0.04,0.16,-0.12
+K_77,Otros trabajos para otros hogares,0.03,0.03,0.0
+J2_46,Acompañar a otros lugares,0.03,0.01,0.02
+J3_55,Cuidado de personas con discapacidad (detallado),0.02,0.0,0.02
+J2_45,Acompañar a centros de salud,0.01,0.0,0.01
+J1_37,Cuidado de personas con discapacidad,0.01,0.0,0.0
+J5_68B,Cuidado de adultos mayores 65+ años (permanente),0.01,0.0,0.01
+M_89,Voluntariado en organización comunitaria,0.01,0.19,-0.18

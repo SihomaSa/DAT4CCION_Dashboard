@@ -1,4 +1,13 @@
-{
+{ 
+  "Latam": {
+    "unidades": [
+      { "nombre": "Perú", "horas_mujeres": 36.20, "horas_hombres": 12.90, "pais": "Peru" },
+      { "nombre": "Colombia", "horas_mujeres": 56.50, "horas_hombres": 16.30, "pais": "Colombia" },
+      { "nombre": "Uruguay", "horas_mujeres": 30.80, "horas_hombres": 13.90, "pais": "Uruguay" },
+      { "nombre": "México", "horas_mujeres": 48.50, "horas_hombres": 21.10, "pais": "Mexico" },
+      { "nombre": "Chile", "horas_mujeres": 34.80, "horas_hombres": 18.90, "pais": "Chile" }
+    ]
+  },
   "Peru": {
     "unidades": [
       { "nombre": "Amazonas", "horas_mujeres": 40.13, "horas_hombres": 11.01 },
@@ -121,6 +130,26 @@
       { "nombre": "Veracruz", "horas_mujeres": 50.34, "horas_hombres": 21.05 },
       { "nombre": "Yucatán", "horas_mujeres": 49.00, "horas_hombres": 21.37 },
       { "nombre": "Zacatecas", "horas_mujeres": 50.49, "horas_hombres": 20.81 }
+    ]
+  },
+    "Chile": {
+    "unidades": [
+      { "nombre": "Arica y Parinacota", "horas_mujeres": 31.10, "horas_hombres": 17.26 },
+      { "nombre": "Tarapacá", "horas_mujeres": 32.89, "horas_hombres": 17.50 },
+      { "nombre": "Antofagasta", "horas_mujeres": 35.53, "horas_hombres": 21.60 },
+      { "nombre": "Atacama", "horas_mujeres": 36.90, "horas_hombres": 19.63 },
+      { "nombre": "Coquimbo", "horas_mujeres": 46.01, "horas_hombres": 22.46 },
+      { "nombre": "Valparaíso", "horas_mujeres": 37.47, "horas_hombres": 25.54 },
+      { "nombre": "Metropolitana", "horas_mujeres": 35.45, "horas_hombres": 22.21 },
+      { "nombre": "O'Higgins", "horas_mujeres": 38.37, "horas_hombres": 20.77 },
+      { "nombre": "Maule", "horas_mujeres": 37.43, "horas_hombres": 19.74 },
+      { "nombre": "Ñuble", "horas_mujeres": 33.39, "horas_hombres": 17.54 },
+      { "nombre": "Biobío", "horas_mujeres": 34.21, "horas_hombres": 18.03 },
+      { "nombre": "La Araucanía", "horas_mujeres": 33.81, "horas_hombres": 17.18 },
+      { "nombre": "Los Ríos", "horas_mujeres": 35.31, "horas_hombres": 22.52 },
+      { "nombre": "Los Lagos", "horas_mujeres": 33.66, "horas_hombres": 19.64 },
+      { "nombre": "Aysén", "horas_mujeres": 35.69, "horas_hombres": 17.92 },
+      { "nombre": "Magallanes", "horas_mujeres": 25.71, "horas_hombres": 12.88 }
     ]
   }
 }

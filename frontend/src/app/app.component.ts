@@ -8,21 +8,31 @@ import { DataService, UnidadTerritorial } from './services/data.service';
 })
 export class AppComponent implements OnInit {
   paises: string[] = [];
-  paisSeleccionado = 'Peru';
+  paisSeleccionado = 'Latam';
   sexoSeleccionado: 'mujeres' | 'hombres' = 'mujeres';
   datosUnidades: UnidadTerritorial[] = [];
   cargando = true;
-
+  actividadesModalVisible = false;
+  
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.cargarPaises();
+    this.escucharCambioPais();
+  }
+
+  escucharCambioPais() {
+    window.addEventListener('cambiarPais', ((event: CustomEvent) => {
+      this.paisSeleccionado = event.detail;
+      this.cargarDatos();
+    }) as EventListener);
   }
 
   cargarPaises() {
     this.dataService.getPaises().subscribe({
       next: (paises) => {
-        this.paises = paises;
+        // Filtrar para que Latam no aparezca en la lista de países normales
+        this.paises = paises.filter(p => p !== 'Latam');
         this.cargarDatos();
       },
       error: (error) => {
@@ -63,12 +73,11 @@ export class AppComponent implements OnInit {
     if (horas.length === 0) return 0;
     return horas.reduce((a, b) => a + b, 0) / horas.length;
   }
-
-  getColorPorRango(horas: number): string {
-    return this.dataService.getColorPorRango(horas);
+  abrirAnalisisActividades() {
+    this.actividadesModalVisible = true;
   }
 
-  getRangoHoras(horas: number): string {
-    return this.dataService.getRangoHoras(horas);
+  cerrarAnalisisActividades() {
+    this.actividadesModalVisible = false;
   }
 }

@@ -1,0 +1,364 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-container {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  h2 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+  }
+}
+
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.filtros-actividades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  
+  .filtro-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    label {
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    
+    select {
+      padding: 8px 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  
+  button {
+    padding: 8px 16px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+    
+    &.active {
+      background: #667eea;
+      border-color: #667eea;
+      color: white;
+    }
+  }
+}
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  
+  .stat-card {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    color: white;
+    
+    .stat-value {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    
+    .stat-label {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  }
+}
+
+.chart-container {
+  h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+  }
+  
+  .subtitle {
+    color: #7f8c8d;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+}
+
+.bar-chart {
+  .bar-item {
+    margin-bottom: 16px;
+    
+    .bar-label {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #2c3e50;
+      font-weight: 500;
+    }
+    
+    .bar-wrapper {
+      background: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 36px;
+      position: relative;
+    }
+    
+    .bar-fill {
+      height: 100%;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 12px;
+      transition: width 0.5s ease;
+      
+      .bar-value {
+        color: white;
+        font-size: 13px;
+        font-weight: 600;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+.brecha-chart {
+  .bar-fill {
+    justify-content: flex-start;
+    padding-left: 12px;
+    
+    &.negative {
+      background-color: #1f77b4 !important;
+      justify-content: flex-end;
+      padding-right: 12px;
+      padding-left: 0;
+    }
+  }
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  
+  .categoria-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    h4 {
+      margin: 0 0 16px 0;
+      color: #2c3e50;
+      font-size: 1.2rem;
+    }
+    
+    .categoria-stats {
+      margin-bottom: 16px;
+      
+      .stat-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        
+        .stat-label {
+          color: #7f8c8d;
+        }
+        
+        .stat-value {
+          font-weight: 600;
+          color: #2c3e50;
+          
+          &.positive {
+            color: #d62728;
+          }
+        }
+      }
+    }
+    
+    .categoria-bar-container {
+      display: flex;
+      height: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      
+      .categoria-bar {
+        height: 100%;
+        transition: width 0.5s ease;
+        
+        &.mujeres {
+          background-color: #d62728;
+        }
+        
+        &.hombres {
+          background-color: #1f77b4;
+        }
+      }
+    }
+    
+    .categoria-legend {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 12px;
+      
+      .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 6px;
+        
+        &.mujeres-dot {
+          background-color: #d62728;
+        }
+        
+        &.hombres-dot {
+          background-color: #1f77b4;
+        }
+      }
+    }
+  }
+  
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-container {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .filtros-actividades {
+    flex-direction: column;
+  }
+  
+  .button-group {
+    flex-wrap: wrap;
+  }
+  
+  .stats-summary {
+    grid-template-columns: 1fr;
+  }
+}
+// Agregar estos estilos para el selector de país
+.filtro-group select {
+  padding: 8px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-weight: 500;
+  min-width: 150px;
+  
+  &:hover {
+    border-color: #667eea;
+  }
+}
+
+// Estilo para el título del modal
+.modal-header h2 {
+  font-size: 1.3rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}

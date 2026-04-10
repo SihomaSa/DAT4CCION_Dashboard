@@ -1,9 +1,29 @@
 <div class="dashboard-container">
+  <!-- Título según vista -->
+  <div class="dashboard-header" *ngIf="paisSeleccionado === 'Latam'">
+    <h1>🌎 Trabajo No Remunerado en América Latina</h1>
+    <p>Comparativa regional del trabajo doméstico y de cuidado no remunerado</p>
+    <p class="highlight">💡 Haz clic en cualquier país para explorar sus regiones</p>
+  </div>
+  <div class="dashboard-header" *ngIf="paisSeleccionado !== 'Latam'">
+    <h1>{{ paisSeleccionado }} - Trabajo No Remunerado</h1>
+    <p>Horas semanales promedio dedicadas a trabajo doméstico y de cuidado no remunerado</p>
+  </div>
+  <div class="acciones-container">
+  <button class="btn-analisis" (click)="abrirAnalisisActividades()">
+    📊 Análisis de Actividades No Remuneradas
+  </button>
+</div>
+<app-actividades 
+  [visible]="actividadesModalVisible" 
+  (close)="cerrarAnalisisActividades()">
+</app-actividades>
   <!-- Filtros -->
   <div class="filtros-container">
     <div class="filtro-group">
       <label for="pais">País:</label>
       <select id="pais" [(ngModel)]="paisSeleccionado" (change)="onPaisChange(paisSeleccionado)">
+        <option value="Latam">🌎 Latinoamérica</option>
         <option *ngFor="let pais of paises" [value]="pais">{{ pais }}</option>
       </select>
     </div>
@@ -25,7 +45,7 @@
     </div>
   </div>
 
-  <!-- Mapa -->
+  <!-- Mapa - Contenedor más grande -->
   <div *ngIf="!cargando" class="mapa-container">
     <app-mapa 
       [pais]="paisSeleccionado"
@@ -34,33 +54,36 @@
     </app-mapa>
   </div>
 
-  <!-- Leyenda actualizada -->
-
+  <!-- Leyenda -->
   <div class="leyenda">
     <span><strong>Horas semanales:</strong></span>
     <div class="leyenda-item">
       <div class="color-box" style="background-color: #FFF5F5;"></div>
-      <span>Menos de 35 hrs</span>
+      <span>Menos de 20 hrs</span>
     </div>
     <div class="leyenda-item">
       <div class="color-box" style="background-color: #FFD4D4;"></div>
-      <span>35 - 40 hrs</span>
+      <span>20 - 25 hrs</span>
     </div>
     <div class="leyenda-item">
       <div class="color-box" style="background-color: #FFA8A8;"></div>
-      <span>40 - 45 hrs</span>
+      <span>26 - 30 hrs</span>
     </div>
     <div class="leyenda-item">
       <div class="color-box" style="background-color: #FF8A8A;"></div>
-      <span>45 - 50 hrs</span>
+      <span>31 - 35 hrs</span>
     </div>
     <div class="leyenda-item">
       <div class="color-box" style="background-color: #FF5252;"></div>
-      <span>50 - 55 hrs</span>
+      <span>36 - 40 hrs</span>
     </div>
     <div class="leyenda-item">
       <div class="color-box" style="background-color: #FF0000;"></div>
-      <span>55 - 60 hrs</span>
+      <span>41 - 50 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #CC0000;"></div>
+      <span>51 - 60 hrs</span>
     </div>
     <div class="leyenda-item">
       <div class="color-box" style="background-color: #8B0000;"></div>
@@ -70,9 +93,14 @@
 
   <!-- Resumen -->
   <div *ngIf="!cargando" class="stats-resumen">
-    <div class="stat-card">
+    <div class="stat-card" *ngIf="paisSeleccionado !== 'Latam'">
       <div class="stat-label">Promedio {{ paisSeleccionado }}</div>
       <div class="stat-value">{{ calcularPromedio() | number:'1.1-1' }} hrs/sem</div>
+    </div>
+    <div class="stat-card" *ngIf="paisSeleccionado === 'Latam'">
+      <div class="stat-label">Países disponibles</div>
+      <div class="stat-value">{{ datosUnidades.length }}</div>
+      <div class="stat-sub">Perú, Colombia, Uruguay, México, Chile</div>
     </div>
   </div>
 </div>

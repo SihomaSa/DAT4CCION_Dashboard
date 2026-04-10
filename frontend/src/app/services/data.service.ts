@@ -38,10 +38,10 @@ export class DataService {
   }
 
   getPaises(): Observable<string[]> {
-    return this.getData().pipe(
-      map(data => Object.keys(data))
-    );
-  }
+  return this.getData().pipe(
+    map(data => Object.keys(data).filter(key => key !== 'Latam')) // Excluir Latam
+  );
+}
 
   getDataByPais(pais: string, sexo: 'mujeres' | 'hombres'): Observable<UnidadTerritorial[]> {
     return this.getData().pipe(
@@ -60,18 +60,24 @@ export class DataService {
   }
 
   getRangoHoras(horas: number): string {
+    if (horas <= 20) return 'Menos de 20 hrs/sem';
+    if (horas <= 25) return '20-25 hrs/sem';
     if (horas <= 30) return '26-30 hrs/sem';
-    if (horas <= 37) return '31-37 hrs/sem';
-    if (horas <= 45) return '38-45 hrs/sem';
-    if (horas <= 55) return '46-55 hrs/sem';
-    return 'Más de 55 hrs/sem';
-  }
+    if (horas <= 35) return '31-35 hrs/sem';
+    if (horas <= 40) return '36-40 hrs/sem';
+    if (horas <= 50) return '41-50 hrs/sem';
+    if (horas <= 60) return '51-60 hrs/sem';
+    return 'Más de 60 hrs/sem';
+    }
 
-  getColorPorRango(horas: number): string {
-    if (horas <= 30) return '#FFD4D4';
-    if (horas <= 37) return '#FF8A8A';
-    if (horas <= 45) return '#FF5252';
-    if (horas <= 55) return '#FF0000';
+    getColorPorRango(horas: number): string {
+    if (horas <= 20) return '#FFF5F5';
+    if (horas <= 25) return '#FFD4D4';
+    if (horas <= 30) return '#FFA8A8';
+    if (horas <= 35) return '#FF8A8A';
+    if (horas <= 40) return '#FF5252';
+    if (horas <= 50) return '#FF0000';
+    if (horas <= 60) return '#CC0000';
     return '#8B0000';
-  }
+    }
 }

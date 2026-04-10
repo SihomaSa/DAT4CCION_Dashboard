@@ -1,0 +1,157 @@
+<div class="modal-overlay" *ngIf="visible" (click)="closeModal()">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>📊 Análisis de Actividades No Remuneradas - {{ paisSeleccionado }}</h2>
+      <button class="close-btn" (click)="closeModal()">✕</button>
+    </div>
+    
+    <div class="modal-body">
+      <!-- Filtros -->
+      <div class="filtros-actividades">
+        <div class="filtro-group">
+          <label>País:</label>
+          <select [(ngModel)]="paisSeleccionado" (change)="onPaisChange()">
+            <option *ngFor="let pais of paisesDisponibles" [value]="pais">{{ pais }}</option>
+          </select>
+        </div>
+        
+        <div class="filtro-group">
+          <label>Vista:</label>
+          <div class="button-group">
+            <button [class.active]="viewMode === 'top'" (click)="viewMode = 'top'; onViewModeChange()">
+              📈 Top Actividades
+            </button>
+            <button [class.active]="viewMode === 'brecha'" (click)="viewMode = 'brecha'; onViewModeChange()">
+              ⚖️ Brecha de Género
+            </button>
+            <button [class.active]="viewMode === 'categorias'" (click)="viewMode = 'categorias'; onViewModeChange()">
+              🏷️ Por Categoría
+            </button>
+          </div>
+        </div>
+        
+        <div class="filtro-group" *ngIf="viewMode !== 'categorias'">
+          <label>Sexo:</label>
+          <div class="button-group">
+            <button [class.active]="sexoSeleccionado === 'mujeres'" (click)="sexoSeleccionado = 'mujeres'; onSexoChange()">
+              👩 Mujeres
+            </button>
+            <button [class.active]="sexoSeleccionado === 'hombres'" (click)="sexoSeleccionado = 'hombres'; onSexoChange()">
+              👨 Hombres
+            </button>
+          </div>
+        </div>
+        
+        <div class="filtro-group" *ngIf="viewMode !== 'categorias'">
+          <label>Categoría:</label>
+          <select [(ngModel)]="categoriaFiltro" (change)="onCategoriaChange()">
+            <option value="todas">Todas</option>
+            <option value="Doméstico">🏠 Doméstico</option>
+            <option value="Cuidado">❤️ Cuidado</option>
+            <option value="Social">👥 Social</option>
+            <option value="Educación">📚 Educación</option>
+            <option value="Voluntariado">🤝 Voluntariado</option>
+            <option value="Total">📊 Total</option>
+          </select>
+        </div>
+        
+        <div class="filtro-group" *ngIf="viewMode === 'top'">
+          <label>Top:</label>
+          <select [(ngModel)]="topLimit" (change)="applyFilters()">
+            <option [value]="10">10 actividades</option>
+            <option [value]="15">15 actividades</option>
+            <option [value]="20">20 actividades</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Vista Top Actividades -->
+      <div class="view-container" *ngIf="viewMode === 'top'">
+        <div class="stats-summary">
+          <div class="stat-card">
+            <div class="stat-value">{{ getTotalHoras().mujeres.toFixed(1) }}</div>
+            <div class="stat-label">Horas totales - Mujeres</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">{{ getTotalHoras().hombres.toFixed(1) }}</div>
+            <div class="stat-label">Horas totales - Hombres</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">{{ (getTotalHoras().mujeres / getTotalHoras().hombres).toFixed(1) }}x</div>
+            <div class="stat-label">Mujeres vs Hombres</div>
+          </div>
+        </div>
+        
+        <div class="chart-container">
+          <h3>Top {{ topLimit }} Actividades de Trabajo No Remunerado</h3>
+          <div class="bar-chart">
+            <div *ngFor="let act of filteredActividades" class="bar-item">
+              <div class="bar-label">{{ act.actividad }}</div>
+              <div class="bar-wrapper">
+                <div class="bar-fill" 
+                     [style.width.%]="getBarWidth(sexoSeleccionado === 'mujeres' ? act.mujeres_hrs_sem : act.hombres_hrs_sem)"
+                     [style.backgroundColor]="getBarColor(sexoSeleccionado === 'mujeres' ? act.mujeres_hrs_sem : act.hombres_hrs_sem)">
+                  <span class="bar-value">{{ (sexoSeleccionado === 'mujeres' ? act.mujeres_hrs_sem : act.hombres_hrs_sem).toFixed(1) }} hrs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Vista Brecha -->
+      <div class="view-container" *ngIf="viewMode === 'brecha'">
+        <div class="chart-container">
+          <h3>⚖️ Brechas de Género en {{ paisSeleccionado }} (Mujeres - Hombres)</h3>
+          <p class="subtitle">Brecha positiva = más horas para mujeres | Brecha negativa = más horas para hombres</p>
+          <div class="bar-chart brecha-chart">
+            <div *ngFor="let act of filteredActividades" class="bar-item">
+              <div class="bar-label">{{ act.actividad }}</div>
+              <div class="bar-wrapper">
+                <div class="bar-fill brecha-bar" 
+                     [style.width.%]="getBarWidth(getAbsValue(act.diferencia))"
+                     [style.backgroundColor]="getBarColor(act.diferencia, isPositive(act.diferencia))"
+                     [class.negative]="!isPositive(act.diferencia)">
+                  <span class="bar-value">{{ isPositive(act.diferencia) ? '+' : '' }}{{ act.diferencia.toFixed(1) }} hrs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Vista Categorías -->
+      <div class="view-container" *ngIf="viewMode === 'categorias'">
+        <div class="categorias-grid">
+          <div *ngFor="let cat of getCategoriasData()" class="categoria-card">
+            <h4>{{ getCategoriaIcon(cat.categoria) }} {{ cat.categoria }}</h4>
+            <div class="categoria-stats">
+              <div class="stat-row">
+                <span class="stat-label">Mujeres:</span>
+                <span class="stat-value">{{ cat.total_mujeres.toFixed(1) }} hrs/sem</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Hombres:</span>
+                <span class="stat-value">{{ cat.total_hombres.toFixed(1) }} hrs/sem</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Brecha:</span>
+                <span class="stat-value" [class.positive]="isPositive(cat.total_mujeres - cat.total_hombres)">
+                  {{ (cat.total_mujeres - cat.total_hombres).toFixed(1) }} hrs
+                </span>
+              </div>
+            </div>
+            <div class="categoria-bar-container">
+              <div class="categoria-bar mujeres" [style.width.%]="(cat.total_mujeres / (cat.total_mujeres + cat.total_hombres)) * 100"></div>
+              <div class="categoria-bar hombres" [style.width.%]="(cat.total_hombres / (cat.total_mujeres + cat.total_hombres)) * 100"></div>
+            </div>
+            <div class="categoria-legend">
+              <span><span class="dot mujeres-dot"></span> Mujeres</span>
+              <span><span class="dot hombres-dot"></span> Hombres</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
