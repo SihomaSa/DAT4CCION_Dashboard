@@ -1,0 +1,1782 @@
+[
+  {
+    "codigo": 311,
+    "actividad": "Cocinar y preparar alimentos y bebidas",
+    "mujeres_hrs_sem": 9.190577581987274,
+    "hombres_hrs_sem": 1.7803766540383241,
+    "diferencia": 7.410200927948949,
+    "categoria": "Doméstico",
+    "subcategoria": "Preparación de alimentos",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 321,
+    "actividad": "Limpiar la vivienda",
+    "mujeres_hrs_sem": 4.115271659324523,
+    "hombres_hrs_sem": 1.7021358370394775,
+    "diferencia": 2.4131358222850454,
+    "categoria": "Doméstico",
+    "subcategoria": "Limpieza del hogar",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 313,
+    "actividad": "Lavar la vajilla y limpiar el lugar donde se cocinó",
+    "mujeres_hrs_sem": 2.888179148311307,
+    "hombres_hrs_sem": 0.6026739142370834,
+    "diferencia": 2.2855052340742237,
+    "categoria": "Doméstico",
+    "subcategoria": "Limpieza del hogar",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 331,
+    "actividad": "Lavar y secar ropa a mano o a máquina",
+    "mujeres_hrs_sem": 2.860034263338228,
+    "hombres_hrs_sem": 0.7868829956624388,
+    "diferencia": 2.0731512676757893,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de ropa",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 4115,
+    "actividad": "Estar pendiente de miembros del hogar de 0 a 14 años",
+    "mujeres_hrs_sem": 3.36079295154185,
+    "hombres_hrs_sem": 0.7607752704112446,
+    "diferencia": 2.6000176811306055,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 4111,
+    "actividad": "Dar de comer a miembros del hogar de 0 a 14 años",
+    "mujeres_hrs_sem": 1.5514439549681838,
+    "hombres_hrs_sem": 0.1067094932191292,
+    "diferencia": 1.4447344617490545,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 4131,
+    "actividad": "Apoyo en tareas escolares a miembros del hogar de 0 a 14 años",
+    "mujeres_hrs_sem": 1.469236417033774,
+    "hombres_hrs_sem": 0.4587108109592049,
+    "diferencia": 1.010525606074569,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo educativo",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 4114,
+    "actividad": "Jugar, conversar o leer con miembros del hogar de 0 a 14 años",
+    "mujeres_hrs_sem": 1.219309838472834,
+    "hombres_hrs_sem": 0.8029704057541318,
+    "diferencia": 0.4163394327187022,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 431,
+    "actividad": "Cuidado y apoyo a miembros del hogar de 60 años y más",
+    "mujeres_hrs_sem": 0.7732990699951051,
+    "hombres_hrs_sem": 0.5367869104485807,
+    "diferencia": 0.23651215954652438,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos mayores",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 312,
+    "actividad": "Servir los alimentos y limpiar el lugar donde se comió",
+    "mujeres_hrs_sem": 0.6799804209495839,
+    "hombres_hrs_sem": 0.11236479437764234,
+    "diferencia": 0.5676156265719415,
+    "categoria": "Doméstico",
+    "subcategoria": "Servicio de alimentos",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 4113,
+    "actividad": "Bañar, asear o arreglar a miembros del hogar de 0 a 14 años",
+    "mujeres_hrs_sem": 0.6412139011257953,
+    "hombres_hrs_sem": 0.06083566683138418,
+    "diferencia": 0.5803782342944112,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 410,
+    "actividad": "Otras actividades de cuidado y apoyo a miembros del hogar de 0 a 14 años",
+    "mujeres_hrs_sem": 0.5278267254038179,
+    "hombres_hrs_sem": 0.133421182671718,
+    "diferencia": 0.39440554273209993,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 332,
+    "actividad": "Planchar o guardar la ropa",
+    "mujeres_hrs_sem": 0.42161037689672054,
+    "hombres_hrs_sem": 0.12897380991599408,
+    "diferencia": 0.2926365669807265,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de ropa",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 512,
+    "actividad": "Trabajo de cuidado no remunerado a personas de otros hogares",
+    "mujeres_hrs_sem": 0.3747919725893294,
+    "hombres_hrs_sem": 0.12955032119914348,
+    "diferencia": 0.24524165139018592,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado a otros hogares",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 4413,
+    "actividad": "Estar pendiente de miembros del hogar con discapacidad o dependencia permanente",
+    "mujeres_hrs_sem": 0.27038668624571705,
+    "hombres_hrs_sem": 0.091610388184264,
+    "diferencia": 0.17877629806145307,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de personas con discapacidad",
+    "pais": "Peru"
+  },
+  {
+    "codigo": 4411,
+    "actividad": "Dar de comer, bañar y arreglar a miembros del hogar con discapacidad o dependencia permanente",
+    "mujeres_hrs_sem": 0.184630445423397,
+    "hombres_hrs_sem": 0.035276999945094166,
+    "diferencia": 0.14935344547830282,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de personas con discapacidad",
+    "pais": "Peru"
+  },
+  {
+    "codigo": "TRAB_NO_REM_VOL",
+    "actividad": "Trabajo no remunerado total",
+    "mujeres_hrs_sem": 49.582220709053196,
+    "hombres_hrs_sem": 21.45244905914828,
+    "diferencia": 28.129771649904917,
+    "categoria": "Total",
+    "subcategoria": "General",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "ACTIV_CONVIV",
+    "actividad": "Convivencia social",
+    "mujeres_hrs_sem": 21.12479060411048,
+    "hombres_hrs_sem": 22.779734812567167,
+    "diferencia": -1.654944208456687,
+    "categoria": "Social",
+    "subcategoria": "Convivencia",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "PREP_SERV_ALIM",
+    "actividad": "Preparar alimentos y bebidas",
+    "mujeres_hrs_sem": 13.386804721087344,
+    "hombres_hrs_sem": 3.165957603725477,
+    "diferencia": 10.220847117361867,
+    "categoria": "Doméstico",
+    "subcategoria": "Preparación de alimentos",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "LIMP_VIV",
+    "actividad": "Limpiar la vivienda",
+    "mujeres_hrs_sem": 9.154441151076572,
+    "hombres_hrs_sem": 3.8008412879027307,
+    "diferencia": 5.353599863173841,
+    "categoria": "Doméstico",
+    "subcategoria": "Limpieza del hogar",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_INT_0A5_CON_CP",
+    "actividad": "Cuidado de niños 0-5 años con CP",
+    "mujeres_hrs_sem": 7.218038309879213,
+    "hombres_hrs_sem": 2.423242092841941,
+    "diferencia": 4.7947962170372715,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_INT_6A14_CON_CP",
+    "actividad": "Cuidado de niños 6-14 años con CP",
+    "mujeres_hrs_sem": 5.486008082102769,
+    "hombres_hrs_sem": 2.5445908928082264,
+    "diferencia": 2.9414171892945427,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "ACTIV_ESTUD",
+    "actividad": "Actividades de estudio",
+    "mujeres_hrs_sem": 4.11820253322296,
+    "hombres_hrs_sem": 4.152909475946647,
+    "diferencia": -0.034706942723686574,
+    "categoria": "Educación",
+    "subcategoria": "Estudio",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "LIMP_ROP",
+    "actividad": "Lavar, planchar y cuidar ropa",
+    "mujeres_hrs_sem": 3.9403686791814625,
+    "hombres_hrs_sem": 1.1451956507996701,
+    "diferencia": 2.795173028381792,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de ropa",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_INT_0A5_SIN_CP",
+    "actividad": "Cuidado de niños 0-5 años sin CP",
+    "mujeres_hrs_sem": 3.904031260291774,
+    "hombres_hrs_sem": 1.3750057947194299,
+    "diferencia": 2.529025465572344,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_INT_6A14_SIN_CP",
+    "actividad": "Cuidado de niños 6-14 años sin CP",
+    "mujeres_hrs_sem": 2.516176666933696,
+    "hombres_hrs_sem": 1.2975693785953595,
+    "diferencia": 1.2186072883383365,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_ESP_INT_HOG_CON_CP",
+    "actividad": "Cuidado especializado intrahogar con CP",
+    "mujeres_hrs_sem": 2.370173213347931,
+    "hombres_hrs_sem": 1.1184177255199441,
+    "diferencia": 1.251755487827987,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado especializado",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_INT_15A59",
+    "actividad": "Cuidado de personas de 15-59 años",
+    "mujeres_hrs_sem": 2.0405725119495846,
+    "hombres_hrs_sem": 2.017942558526666,
+    "diferencia": 0.022629953422918625,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "TRAB_NO_REM_OTROS_HOG",
+    "actividad": "Trabajo no remunerado en otros hogares",
+    "mujeres_hrs_sem": 2.0278258431466796,
+    "hombres_hrs_sem": 1.2229945002844678,
+    "diferencia": 0.8048313428622118,
+    "categoria": "Doméstico",
+    "subcategoria": "Ayuda a otros hogares",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "COMPRAS_HOG",
+    "actividad": "Compras del hogar",
+    "mujeres_hrs_sem": 1.7330160128886394,
+    "hombres_hrs_sem": 1.275632151210569,
+    "diferencia": 0.4573838616780703,
+    "categoria": "Doméstico",
+    "subcategoria": "Compras",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_ESP_INT_HOG_SIN_CP",
+    "actividad": "Cuidado especializado intrahogar sin CP",
+    "mujeres_hrs_sem": 1.230680391999786,
+    "hombres_hrs_sem": 0.5758976547190086,
+    "diferencia": 0.6547827372807774,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado especializado",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_INT_60MAS_CON_CP",
+    "actividad": "Cuidado de adultos mayores 60+ con CP",
+    "mujeres_hrs_sem": 1.0127359876098159,
+    "hombres_hrs_sem": 0.9014671176011967,
+    "diferencia": 0.11126887000861918,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos mayores",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_PER_OTROS_HOG",
+    "actividad": "Cuidado de personas en otros hogares",
+    "mujeres_hrs_sem": 0.9937069970715727,
+    "hombres_hrs_sem": 0.4373717259835219,
+    "diferencia": 0.5563352710880508,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado a otros hogares",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "ORG_SUP_HOG",
+    "actividad": "Organización y supervisión del hogar",
+    "mujeres_hrs_sem": 0.7738119397936726,
+    "hombres_hrs_sem": 0.7983737910108074,
+    "diferencia": -0.024561851217134834,
+    "categoria": "Doméstico",
+    "subcategoria": "Organización",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_INT_60MAS_SIN_CP",
+    "actividad": "Cuidado de adultos mayores 60+ sin CP",
+    "mujeres_hrs_sem": 0.4499109900575893,
+    "hombres_hrs_sem": 0.396810270350001,
+    "diferencia": 0.053100719707588284,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos mayores",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "PAGOS_TRAM_HOG",
+    "actividad": "Pagos y trámites del hogar",
+    "mujeres_hrs_sem": 0.3173529333226514,
+    "hombres_hrs_sem": 0.2983411298649296,
+    "diferencia": 0.0190118034577218,
+    "categoria": "Doméstico",
+    "subcategoria": "Trámites",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "CUID_ESP_DISC_ENF",
+    "actividad": "Cuidado de personas con discapacidad/enfermedad",
+    "mujeres_hrs_sem": 0.2605383321316991,
+    "hombres_hrs_sem": 0.15306487978591143,
+    "diferencia": 0.10747345234578765,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado especializado",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "TRAB_NO_REM_NO_FAM",
+    "actividad": "Trabajo no remunerado para no familiares",
+    "mujeres_hrs_sem": 0.2552765093860984,
+    "hombres_hrs_sem": 0.4042448953789747,
+    "diferencia": -0.14896838599287626,
+    "categoria": "Doméstico",
+    "subcategoria": "Ayuda externa",
+    "pais": "Mexico"
+  },
+  {
+    "codigo": "MANT_VIV",
+    "actividad": "Mantenimiento de la vivienda",
+    "mujeres_hrs_sem": 0.12107132366685344,
+    "hombres_hrs_sem": 0.7394525570516464,
+    "diferencia": -0.6183812333847929,
+    "categoria": "Doméstico",
+    "subcategoria": "Mantenimiento",
+    "pais": "Mexico"
+  }, 
+  {
+    "codigo": "J4_58",
+    "actividad": "Bañar y asear",
+    "mujeres_hrs_sem": 22.44,
+    "hombres_hrs_sem": 16.96,
+    "diferencia": 5.48,
+    "categoria": "Cuidado",
+    "subcategoria": "Higiene personal",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "C13",
+    "actividad": "Limpiar la vivienda",
+    "mujeres_hrs_sem": 7.93,
+    "hombres_hrs_sem": 2.65,
+    "diferencia": 5.28,
+    "categoria": "Doméstico",
+    "subcategoria": "Limpieza del hogar",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J1_38",
+    "actividad": "Cuidado de personas con enfermedad",
+    "mujeres_hrs_sem": 7.91,
+    "hombres_hrs_sem": 3.11,
+    "diferencia": 4.80,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de salud",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J1_33",
+    "actividad": "Cuidado de niños 6-12 años",
+    "mujeres_hrs_sem": 7.67,
+    "hombres_hrs_sem": 2.68,
+    "diferencia": 4.99,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "B10",
+    "actividad": "Preparar alimentos y bebidas",
+    "mujeres_hrs_sem": 5.75,
+    "hombres_hrs_sem": 2.52,
+    "diferencia": 3.22,
+    "categoria": "Doméstico",
+    "subcategoria": "Preparación de alimentos",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "B11",
+    "actividad": "Servir alimentos y limpiar lugar donde se comió",
+    "mujeres_hrs_sem": 3.10,
+    "hombres_hrs_sem": 1.58,
+    "diferencia": 1.52,
+    "categoria": "Doméstico",
+    "subcategoria": "Servicio de alimentos",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J4_62",
+    "actividad": "Jugar y conversar",
+    "mujeres_hrs_sem": 2.82,
+    "hombres_hrs_sem": 1.09,
+    "diferencia": 1.72,
+    "categoria": "Cuidado",
+    "subcategoria": "Acompañamiento",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "D15",
+    "actividad": "Mantenimiento y reparaciones menores",
+    "mujeres_hrs_sem": 2.44,
+    "hombres_hrs_sem": 0.63,
+    "diferencia": 1.81,
+    "categoria": "Doméstico",
+    "subcategoria": "Mantenimiento",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "E17",
+    "actividad": "Compras del hogar",
+    "mujeres_hrs_sem": 2.17,
+    "hombres_hrs_sem": 1.95,
+    "diferencia": 0.22,
+    "categoria": "Doméstico",
+    "subcategoria": "Compras",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_68",
+    "actividad": "Cuidado de adultos 18-64 años (permanente)",
+    "mujeres_hrs_sem": 2.11,
+    "hombres_hrs_sem": 1.19,
+    "diferencia": 0.92,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "I22",
+    "actividad": "Traslados por trabajo no remunerado",
+    "mujeres_hrs_sem": 2.07,
+    "hombres_hrs_sem": 3.55,
+    "diferencia": -1.48,
+    "categoria": "Doméstico",
+    "subcategoria": "Traslados",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J4_61",
+    "actividad": "Levantar y acostar",
+    "mujeres_hrs_sem": 1.87,
+    "hombres_hrs_sem": 1.57,
+    "diferencia": 0.30,
+    "categoria": "Cuidado",
+    "subcategoria": "Movilidad",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J4_63",
+    "actividad": "Estar pendiente",
+    "mujeres_hrs_sem": 1.63,
+    "hombres_hrs_sem": 1.36,
+    "diferencia": 0.27,
+    "categoria": "Cuidado",
+    "subcategoria": "Supervisión",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "C14",
+    "actividad": "Limpiar ropa y calzado",
+    "mujeres_hrs_sem": 1.57,
+    "hombres_hrs_sem": 1.50,
+    "diferencia": 0.06,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de ropa",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_71",
+    "actividad": "Apoyo emocional",
+    "mujeres_hrs_sem": 1.32,
+    "hombres_hrs_sem": 1.90,
+    "diferencia": -0.58,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo emocional",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "M_90",
+    "actividad": "Voluntariado en actividades religiosas",
+    "mujeres_hrs_sem": 1.32,
+    "hombres_hrs_sem": 0.49,
+    "diferencia": 0.82,
+    "categoria": "Voluntariado",
+    "subcategoria": "Religioso",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J2_47",
+    "actividad": "Estar pendiente de familiares",
+    "mujeres_hrs_sem": 1.29,
+    "hombres_hrs_sem": 0.70,
+    "diferencia": 0.59,
+    "categoria": "Cuidado",
+    "subcategoria": "Supervisión familiar",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J2_42",
+    "actividad": "Apoyo en tareas escolares",
+    "mujeres_hrs_sem": 1.00,
+    "hombres_hrs_sem": 0.19,
+    "diferencia": 0.81,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo educativo",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J4_60",
+    "actividad": "Dar de comer",
+    "mujeres_hrs_sem": 0.98,
+    "hombres_hrs_sem": 0.71,
+    "diferencia": 0.27,
+    "categoria": "Cuidado",
+    "subcategoria": "Alimentación",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "I24",
+    "actividad": "Traslados por cuidado",
+    "mujeres_hrs_sem": 0.90,
+    "hombres_hrs_sem": 0.60,
+    "diferencia": 0.31,
+    "categoria": "Cuidado",
+    "subcategoria": "Traslados",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J4_59",
+    "actividad": "Vestir y arreglar",
+    "mujeres_hrs_sem": 0.82,
+    "hombres_hrs_sem": 0.68,
+    "diferencia": 0.14,
+    "categoria": "Cuidado",
+    "subcategoria": "Vestimenta",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "M_91",
+    "actividad": "Voluntariado en otras áreas",
+    "mujeres_hrs_sem": 0.82,
+    "hombres_hrs_sem": 0.49,
+    "diferencia": 0.34,
+    "categoria": "Voluntariado",
+    "subcategoria": "General",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J2_44",
+    "actividad": "Acompañar a centros educativos",
+    "mujeres_hrs_sem": 0.64,
+    "hombres_hrs_sem": 0.02,
+    "diferencia": 0.62,
+    "categoria": "Cuidado",
+    "subcategoria": "Acompañamiento escolar",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "K_76",
+    "actividad": "Mantenimiento para otros hogares",
+    "mujeres_hrs_sem": 0.58,
+    "hombres_hrs_sem": 0.78,
+    "diferencia": -0.20,
+    "categoria": "Doméstico",
+    "subcategoria": "Ayuda a otros hogares",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "K_74",
+    "actividad": "Apoyo escolar para otros hogares",
+    "mujeres_hrs_sem": 0.56,
+    "hombres_hrs_sem": 0.25,
+    "diferencia": 0.31,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo educativo externo",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "K_75",
+    "actividad": "Acompañamiento para otros hogares",
+    "mujeres_hrs_sem": 0.46,
+    "hombres_hrs_sem": 0.18,
+    "diferencia": 0.28,
+    "categoria": "Cuidado",
+    "subcategoria": "Acompañamiento externo",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "H21",
+    "actividad": "Traslados por actividades del hogar",
+    "mujeres_hrs_sem": 0.45,
+    "hombres_hrs_sem": 0.41,
+    "diferencia": 0.04,
+    "categoria": "Doméstico",
+    "subcategoria": "Traslados",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J3_54",
+    "actividad": "Cuidado de adultos mayores 65+ años (detallado)",
+    "mujeres_hrs_sem": 0.44,
+    "hombres_hrs_sem": 0.25,
+    "diferencia": 0.19,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos mayores",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "K_72",
+    "actividad": "Quehaceres domésticos para otros hogares",
+    "mujeres_hrs_sem": 0.41,
+    "hombres_hrs_sem": 0.18,
+    "diferencia": 0.23,
+    "categoria": "Doméstico",
+    "subcategoria": "Ayuda doméstica externa",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "F19",
+    "actividad": "Organización y supervisión del hogar",
+    "mujeres_hrs_sem": 0.38,
+    "hombres_hrs_sem": 0.55,
+    "diferencia": -0.17,
+    "categoria": "Doméstico",
+    "subcategoria": "Organización",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J3_56",
+    "actividad": "Cuidado de personas con enfermedad (detallado)",
+    "mujeres_hrs_sem": 0.36,
+    "hombres_hrs_sem": 0.29,
+    "diferencia": 0.08,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de salud",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J2_43",
+    "actividad": "Asistir a reuniones escolares",
+    "mujeres_hrs_sem": 0.36,
+    "hombres_hrs_sem": 0.09,
+    "diferencia": 0.27,
+    "categoria": "Cuidado",
+    "subcategoria": "Actividades escolares",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "E18",
+    "actividad": "Pagos y trámites del hogar",
+    "mujeres_hrs_sem": 0.33,
+    "hombres_hrs_sem": 0.14,
+    "diferencia": 0.19,
+    "categoria": "Doméstico",
+    "subcategoria": "Trámites",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J1_34",
+    "actividad": "Cuidado de adolescentes 13-17 años",
+    "mujeres_hrs_sem": 0.30,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.29,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adolescentes",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_70",
+    "actividad": "Cuidado de personas con enfermedad (permanente)",
+    "mujeres_hrs_sem": 0.25,
+    "hombres_hrs_sem": 0.92,
+    "diferencia": -0.67,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de salud",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J3_50",
+    "actividad": "Cuidado de niños 0-5 años (detallado)",
+    "mujeres_hrs_sem": 0.24,
+    "hombres_hrs_sem": 0.11,
+    "diferencia": 0.13,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "D16",
+    "actividad": "Construcción y reparaciones mayores",
+    "mujeres_hrs_sem": 0.23,
+    "hombres_hrs_sem": 0.18,
+    "diferencia": 0.05,
+    "categoria": "Doméstico",
+    "subcategoria": "Construcción",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "M_88",
+    "actividad": "Voluntariado en educación",
+    "mujeres_hrs_sem": 0.23,
+    "hombres_hrs_sem": 0.05,
+    "diferencia": 0.18,
+    "categoria": "Voluntariado",
+    "subcategoria": "Educación",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J3_51",
+    "actividad": "Cuidado de niños 6-12 años (detallado)",
+    "mujeres_hrs_sem": 0.21,
+    "hombres_hrs_sem": 0.07,
+    "diferencia": 0.15,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "M_87",
+    "actividad": "Voluntariado en salud",
+    "mujeres_hrs_sem": 0.18,
+    "hombres_hrs_sem": 0.22,
+    "diferencia": -0.04,
+    "categoria": "Voluntariado",
+    "subcategoria": "Salud",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "G20",
+    "actividad": "Cuidado de mascotas y plantas",
+    "mujeres_hrs_sem": 0.16,
+    "hombres_hrs_sem": 0.89,
+    "diferencia": -0.73,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de mascotas",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J1_32",
+    "actividad": "Cuidado de niños 0-5 años",
+    "mujeres_hrs_sem": 0.13,
+    "hombres_hrs_sem": 0.14,
+    "diferencia": -0.01,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_65",
+    "actividad": "Cuidado de niños 0-5 años (permanente)",
+    "mujeres_hrs_sem": 0.11,
+    "hombres_hrs_sem": 0.04,
+    "diferencia": 0.07,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "K_73",
+    "actividad": "Cuidado de personas para otros hogares",
+    "mujeres_hrs_sem": 0.10,
+    "hombres_hrs_sem": 0.10,
+    "diferencia": 0.00,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado externo",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J3_52",
+    "actividad": "Cuidado de adolescentes 13-17 años (detallado)",
+    "mujeres_hrs_sem": 0.10,
+    "hombres_hrs_sem": 0.04,
+    "diferencia": 0.06,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adolescentes",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J3_53",
+    "actividad": "Cuidado de adultos 18-64 años (detallado)",
+    "mujeres_hrs_sem": 0.06,
+    "hombres_hrs_sem": 0.03,
+    "diferencia": 0.04,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_66",
+    "actividad": "Cuidado de niños 6-12 años (permanente)",
+    "mujeres_hrs_sem": 0.06,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.05,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J1_35",
+    "actividad": "Cuidado de adultos 18-64 años",
+    "mujeres_hrs_sem": 0.05,
+    "hombres_hrs_sem": 0.02,
+    "diferencia": 0.03,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_72",
+    "actividad": "Traslados por cuidado",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.05,
+    "diferencia": -0.01,
+    "categoria": "Cuidado",
+    "subcategoria": "Traslados",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_67",
+    "actividad": "Cuidado de adolescentes 13-17 años (permanente)",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.03,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adolescentes",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J1_36",
+    "actividad": "Cuidado de adultos mayores 65+ años",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.03,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos mayores",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_69",
+    "actividad": "Cuidado de personas con discapacidad (permanente)",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.16,
+    "diferencia": -0.12,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de discapacidad",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "K_77",
+    "actividad": "Otros trabajos para otros hogares",
+    "mujeres_hrs_sem": 0.03,
+    "hombres_hrs_sem": 0.03,
+    "diferencia": 0.00,
+    "categoria": "Doméstico",
+    "subcategoria": "Ayuda externa",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J2_46",
+    "actividad": "Acompañar a otros lugares",
+    "mujeres_hrs_sem": 0.03,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.02,
+    "categoria": "Cuidado",
+    "subcategoria": "Acompañamiento",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J3_55",
+    "actividad": "Cuidado de personas con discapacidad (detallado)",
+    "mujeres_hrs_sem": 0.02,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.02,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de discapacidad",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J2_45",
+    "actividad": "Acompañar a centros de salud",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.01,
+    "categoria": "Cuidado",
+    "subcategoria": "Acompañamiento salud",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J1_37",
+    "actividad": "Cuidado de personas con discapacidad",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.00,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de discapacidad",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "J5_68B",
+    "actividad": "Cuidado de adultos mayores 65+ años (permanente)",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.01,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos mayores",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "M_89",
+    "actividad": "Voluntariado en organización comunitaria",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.19,
+    "diferencia": -0.18,
+    "categoria": "Voluntariado",
+    "subcategoria": "Comunitario",
+    "pais": "Uruguay"
+  },
+  {
+    "codigo": "cuidado_pasivo",
+    "actividad": "Estar pendiente (cuidado pasivo)",
+    "mujeres_hrs_sem": 19.60,
+    "hombres_hrs_sem": 5.02,
+    "diferencia": 14.58,
+    "categoria": "Cuidado",
+    "subcategoria": "Supervisión",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "prep_alimentos",
+    "actividad": "Preparar y servir alimentos",
+    "mujeres_hrs_sem": 9.00,
+    "hombres_hrs_sem": 1.63,
+    "diferencia": 7.37,
+    "categoria": "Doméstico",
+    "subcategoria": "Preparación de alimentos",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "limpiar_vivienda",
+    "actividad": "Limpiar la vivienda",
+    "mujeres_hrs_sem": 6.23,
+    "hombres_hrs_sem": 1.89,
+    "diferencia": 4.34,
+    "categoria": "Doméstico",
+    "subcategoria": "Limpieza del hogar",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "lavar_ropa",
+    "actividad": "Lavar, planchar y guardar ropa",
+    "mujeres_hrs_sem": 3.35,
+    "hombres_hrs_sem": 0.58,
+    "diferencia": 2.77,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de ropa",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "lavar_loza",
+    "actividad": "Levantar platos y lavar loza",
+    "mujeres_hrs_sem": 2.86,
+    "hombres_hrs_sem": 0.79,
+    "diferencia": 2.07,
+    "categoria": "Doméstico",
+    "subcategoria": "Limpieza de cocina",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "jugar",
+    "actividad": "Jugar con niños",
+    "mujeres_hrs_sem": 1.14,
+    "hombres_hrs_sem": 0.64,
+    "diferencia": 0.50,
+    "categoria": "Cuidado",
+    "subcategoria": "Recreación infantil",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "compras_virtual",
+    "actividad": "Compras personales/hogar (virtual)",
+    "mujeres_hrs_sem": 1.09,
+    "hombres_hrs_sem": 1.13,
+    "diferencia": -0.04,
+    "categoria": "Doméstico",
+    "subcategoria": "Compras",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "alimentar",
+    "actividad": "Alimentar o ayudar a comer",
+    "mujeres_hrs_sem": 1.02,
+    "hombres_hrs_sem": 0.12,
+    "diferencia": 0.90,
+    "categoria": "Cuidado",
+    "subcategoria": "Alimentación",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "apoyo_escolar",
+    "actividad": "Ayudar con tareas escolares",
+    "mujeres_hrs_sem": 0.85,
+    "hombres_hrs_sem": 0.17,
+    "diferencia": 0.68,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo educativo",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "banar_vestir",
+    "actividad": "Bañar, vestir y arreglar",
+    "mujeres_hrs_sem": 0.62,
+    "hombres_hrs_sem": 0.05,
+    "diferencia": 0.57,
+    "categoria": "Cuidado",
+    "subcategoria": "Higiene personal",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "cuidar_mascotas",
+    "actividad": "Cuidar mascotas",
+    "mujeres_hrs_sem": 0.53,
+    "hombres_hrs_sem": 0.42,
+    "diferencia": 0.11,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de mascotas",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "aconsejar",
+    "actividad": "Aconsejar o consolar",
+    "mujeres_hrs_sem": 0.25,
+    "hombres_hrs_sem": 0.17,
+    "diferencia": 0.08,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo emocional",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "cuidar_jardin",
+    "actividad": "Cuidar jardín y plantas",
+    "mujeres_hrs_sem": 0.23,
+    "hombres_hrs_sem": 0.13,
+    "diferencia": 0.10,
+    "categoria": "Doméstico",
+    "subcategoria": "Jardinería",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "leer_cuentos",
+    "actividad": "Leer cuentos",
+    "mujeres_hrs_sem": 0.12,
+    "hombres_hrs_sem": 0.04,
+    "diferencia": 0.08,
+    "categoria": "Cuidado",
+    "subcategoria": "Lectura infantil",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "reparar_ropa",
+    "actividad": "Reparar ropa y calzado",
+    "mujeres_hrs_sem": 0.11,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.10,
+    "categoria": "Doméstico",
+    "subcategoria": "Reparaciones",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "llevar_parque",
+    "actividad": "Llevar al parque",
+    "mujeres_hrs_sem": 0.08,
+    "hombres_hrs_sem": 0.04,
+    "diferencia": 0.04,
+    "categoria": "Cuidado",
+    "subcategoria": "Actividades recreativas",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "dar_medicamentos",
+    "actividad": "Suministrar medicamentos y terapias",
+    "mujeres_hrs_sem": 0.07,
+    "hombres_hrs_sem": 0.02,
+    "diferencia": 0.05,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de salud",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "acompanar_citas",
+    "actividad": "Acompañar a citas médicas",
+    "mujeres_hrs_sem": 0.06,
+    "hombres_hrs_sem": 0.03,
+    "diferencia": 0.03,
+    "categoria": "Cuidado",
+    "subcategoria": "Acompañamiento salud",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "preparar_conservas",
+    "actividad": "Preparar conservas, quesos y bebidas",
+    "mujeres_hrs_sem": 0.05,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.04,
+    "categoria": "Doméstico",
+    "subcategoria": "Preparación de alimentos",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "supervisar_hogar",
+    "actividad": "Dirigir y supervisar actividades del hogar",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.03,
+    "categoria": "Doméstico",
+    "subcategoria": "Organización",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "elaborar_ropa",
+    "actividad": "Elaborar prendas de vestir",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.04,
+    "categoria": "Doméstico",
+    "subcategoria": "Confección",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "reparar_vivienda",
+    "actividad": "Reparar y mantener vivienda",
+    "mujeres_hrs_sem": 0.02,
+    "hombres_hrs_sem": 0.39,
+    "diferencia": -0.37,
+    "categoria": "Doméstico",
+    "subcategoria": "Mantenimiento",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "llevar_comida",
+    "actividad": "Llevar comida a sitio de trabajo/estudio",
+    "mujeres_hrs_sem": 0.02,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.01,
+    "categoria": "Doméstico",
+    "subcategoria": "Logística",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "traer_agua",
+    "actividad": "Traer agua para el hogar",
+    "mujeres_hrs_sem": 0.02,
+    "hombres_hrs_sem": 0.08,
+    "diferencia": -0.06,
+    "categoria": "Doméstico",
+    "subcategoria": "Abastecimiento",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "compras_presencial",
+    "actividad": "Compras personales/hogar (presencial)",
+    "mujeres_hrs_sem": 0.02,
+    "hombres_hrs_sem": 0.02,
+    "diferencia": 0.00,
+    "categoria": "Doméstico",
+    "subcategoria": "Compras",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "construir_vivienda",
+    "actividad": "Construir o ampliar vivienda",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.07,
+    "diferencia": -0.06,
+    "categoria": "Doméstico",
+    "subcategoria": "Construcción",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "traer_lena",
+    "actividad": "Traer leña o combustibles",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.06,
+    "diferencia": -0.05,
+    "categoria": "Doméstico",
+    "subcategoria": "Abastecimiento",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "limpiar_vehiculo",
+    "actividad": "Limpiar vehículo propio",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.15,
+    "diferencia": -0.14,
+    "categoria": "Doméstico",
+    "subcategoria": "Mantenimiento",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "pagar_facturas",
+    "actividad": "Pagar facturas y trámites",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.00,
+    "categoria": "Doméstico",
+    "subcategoria": "Trámites",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "reparar_electrodomesticos",
+    "actividad": "Reparar electrodomésticos y muebles",
+    "mujeres_hrs_sem": 0.00,
+    "hombres_hrs_sem": 0.09,
+    "diferencia": -0.09,
+    "categoria": "Doméstico",
+    "subcategoria": "Reparaciones",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "comprar_medicamentos",
+    "actividad": "Comprar medicamentos",
+    "mujeres_hrs_sem": 0.00,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.00,
+    "categoria": "Cuidado",
+    "subcategoria": "Compras salud",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "llevar_escuela",
+    "actividad": "Llevar/traer niños al estudio",
+    "mujeres_hrs_sem": 0.00,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.00,
+    "categoria": "Cuidado",
+    "subcategoria": "Transporte escolar",
+    "pais": "Colombia"
+  },
+  {
+    "codigo": "TOTAL_DOMESTICO",
+    "actividad": "TOTAL TRABAJO DOMÉSTICO NO REMUNERADO",
+    "mujeres_hrs_sem": 29.22,
+    "hombres_hrs_sem": 15.82,
+    "diferencia": 13.40,
+    "categoria": "Doméstico",
+    "subcategoria": "Total",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td5",
+    "actividad": "Reparar y mantener ropa y calzado",
+    "mujeres_hrs_sem": 5.94,
+    "hombres_hrs_sem": 2.20,
+    "diferencia": 3.74,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de ropa",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td1",
+    "actividad": "Preparar alimentos y bebidas",
+    "mujeres_hrs_sem": 5.16,
+    "hombres_hrs_sem": 2.28,
+    "diferencia": 2.88,
+    "categoria": "Doméstico",
+    "subcategoria": "Preparación de alimentos",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "TOTAL_VOLUNTARIADO",
+    "actividad": "TOTAL TRABAJO VOLUNTARIO",
+    "mujeres_hrs_sem": 3.69,
+    "hombres_hrs_sem": 2.42,
+    "diferencia": 1.27,
+    "categoria": "Voluntariado",
+    "subcategoria": "Total",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "TOTAL_CUIDADO",
+    "actividad": "TOTAL TRABAJO DE CUIDADO NO REMUNERADO",
+    "mujeres_hrs_sem": 2.67,
+    "hombres_hrs_sem": 1.67,
+    "diferencia": 1.00,
+    "categoria": "Cuidado",
+    "subcategoria": "Total",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td25",
+    "actividad": "Pagar cuentas virtuales",
+    "mujeres_hrs_sem": 2.38,
+    "hombres_hrs_sem": 1.87,
+    "diferencia": 0.51,
+    "categoria": "Doméstico",
+    "subcategoria": "Trámites",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td4",
+    "actividad": "Lavar, secar y planchar ropa",
+    "mujeres_hrs_sem": 2.10,
+    "hombres_hrs_sem": 0.61,
+    "diferencia": 1.49,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de ropa",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td3",
+    "actividad": "Lavar la vajilla",
+    "mujeres_hrs_sem": 2.06,
+    "hombres_hrs_sem": 0.81,
+    "diferencia": 1.24,
+    "categoria": "Doméstico",
+    "subcategoria": "Limpieza de cocina",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td7",
+    "actividad": "Mantener y reparar la vivienda",
+    "mujeres_hrs_sem": 1.55,
+    "hombres_hrs_sem": 0.54,
+    "diferencia": 1.01,
+    "categoria": "Doméstico",
+    "subcategoria": "Mantenimiento",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td22",
+    "actividad": "Recoger ropa de lavandería",
+    "mujeres_hrs_sem": 1.54,
+    "hombres_hrs_sem": 1.13,
+    "diferencia": 0.41,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de ropa",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td26",
+    "actividad": "Otras actividades domésticas",
+    "mujeres_hrs_sem": 1.19,
+    "hombres_hrs_sem": 0.55,
+    "diferencia": 0.64,
+    "categoria": "Doméstico",
+    "subcategoria": "Otras",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tv2",
+    "actividad": "Trabajo voluntario en educación",
+    "mujeres_hrs_sem": 1.17,
+    "hombres_hrs_sem": 1.11,
+    "diferencia": 0.06,
+    "categoria": "Voluntariado",
+    "subcategoria": "Educación",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td20",
+    "actividad": "Preparar conservas",
+    "mujeres_hrs_sem": 1.15,
+    "hombres_hrs_sem": 0.98,
+    "diferencia": 0.17,
+    "categoria": "Doméstico",
+    "subcategoria": "Preparación de alimentos",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td8",
+    "actividad": "Mantener y reparar bienes del hogar",
+    "mujeres_hrs_sem": 1.15,
+    "hombres_hrs_sem": 0.37,
+    "diferencia": 0.78,
+    "categoria": "Doméstico",
+    "subcategoria": "Mantenimiento",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td9",
+    "actividad": "Compras del hogar",
+    "mujeres_hrs_sem": 1.10,
+    "hombres_hrs_sem": 0.20,
+    "diferencia": 0.90,
+    "categoria": "Doméstico",
+    "subcategoria": "Compras",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td2",
+    "actividad": "Servir alimentos y limpiar el lugar donde se comió",
+    "mujeres_hrs_sem": 1.02,
+    "hombres_hrs_sem": 0.53,
+    "diferencia": 0.49,
+    "categoria": "Doméstico",
+    "subcategoria": "Servicio de alimentos",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tv1",
+    "actividad": "Trabajo voluntario en salud",
+    "mujeres_hrs_sem": 0.95,
+    "hombres_hrs_sem": 0.41,
+    "diferencia": 0.54,
+    "categoria": "Voluntariado",
+    "subcategoria": "Salud",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tv4",
+    "actividad": "Trabajo voluntario en actividades religiosas",
+    "mujeres_hrs_sem": 0.92,
+    "hombres_hrs_sem": 0.36,
+    "diferencia": 0.56,
+    "categoria": "Voluntariado",
+    "subcategoria": "Religioso",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td23",
+    "actividad": "Llevar/recoger a reparaciones",
+    "mujeres_hrs_sem": 0.77,
+    "hombres_hrs_sem": 0.57,
+    "diferencia": 0.20,
+    "categoria": "Doméstico",
+    "subcategoria": "Logística",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td16",
+    "actividad": "Traer agua",
+    "mujeres_hrs_sem": 0.51,
+    "hombres_hrs_sem": 0.45,
+    "diferencia": 0.06,
+    "categoria": "Doméstico",
+    "subcategoria": "Abastecimiento",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td12",
+    "actividad": "Cuidar mascotas",
+    "mujeres_hrs_sem": 0.50,
+    "hombres_hrs_sem": 0.41,
+    "diferencia": 0.09,
+    "categoria": "Doméstico",
+    "subcategoria": "Cuidado de mascotas",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td6",
+    "actividad": "Limpiar la vivienda",
+    "mujeres_hrs_sem": 0.47,
+    "hombres_hrs_sem": 0.42,
+    "diferencia": 0.05,
+    "categoria": "Doméstico",
+    "subcategoria": "Limpieza del hogar",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc15",
+    "actividad": "Leer cuentos",
+    "mujeres_hrs_sem": 0.38,
+    "hombres_hrs_sem": 0.27,
+    "diferencia": 0.11,
+    "categoria": "Cuidado",
+    "subcategoria": "Lectura infantil",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc7",
+    "actividad": "Apoyo escolar a niños 0-5 años",
+    "mujeres_hrs_sem": 0.38,
+    "hombres_hrs_sem": 0.24,
+    "diferencia": 0.14,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo educativo",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc12",
+    "actividad": "Acompañar a centros de salud",
+    "mujeres_hrs_sem": 0.36,
+    "hombres_hrs_sem": 0.32,
+    "diferencia": 0.04,
+    "categoria": "Cuidado",
+    "subcategoria": "Acompañamiento salud",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tv6",
+    "actividad": "Trabajo voluntario en emergencias",
+    "mujeres_hrs_sem": 0.36,
+    "hombres_hrs_sem": 0.33,
+    "diferencia": 0.03,
+    "categoria": "Voluntariado",
+    "subcategoria": "Emergencias",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc4",
+    "actividad": "Cuidado de adultos 18-64 años (fisiológico)",
+    "mujeres_hrs_sem": 0.29,
+    "hombres_hrs_sem": 0.18,
+    "diferencia": 0.11,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc22",
+    "actividad": "Cuidado de niños 0-5 años (detallado)",
+    "mujeres_hrs_sem": 0.26,
+    "hombres_hrs_sem": 0.15,
+    "diferencia": 0.11,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc3",
+    "actividad": "Cuidado de adolescentes 13-17 años (fisiológico)",
+    "mujeres_hrs_sem": 0.20,
+    "hombres_hrs_sem": 0.02,
+    "diferencia": 0.18,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adolescentes",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td10",
+    "actividad": "Pagar cuentas y hacer trámites",
+    "mujeres_hrs_sem": 0.19,
+    "hombres_hrs_sem": 0.93,
+    "diferencia": -0.74,
+    "categoria": "Doméstico",
+    "subcategoria": "Trámites",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc2",
+    "actividad": "Cuidado de niños 6-12 años (fisiológico)",
+    "mujeres_hrs_sem": 0.18,
+    "hombres_hrs_sem": 0.02,
+    "diferencia": 0.16,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tv3",
+    "actividad": "Trabajo voluntario en organización comunitaria",
+    "mujeres_hrs_sem": 0.18,
+    "hombres_hrs_sem": 0.08,
+    "diferencia": 0.10,
+    "categoria": "Voluntariado",
+    "subcategoria": "Comunitario",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td14",
+    "actividad": "Traslados por trabajo doméstico",
+    "mujeres_hrs_sem": 0.17,
+    "hombres_hrs_sem": 0.12,
+    "diferencia": 0.05,
+    "categoria": "Doméstico",
+    "subcategoria": "Traslados",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td11",
+    "actividad": "Organizar y supervisar actividades del hogar",
+    "mujeres_hrs_sem": 0.13,
+    "hombres_hrs_sem": 0.69,
+    "diferencia": -0.56,
+    "categoria": "Doméstico",
+    "subcategoria": "Organización",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "td17",
+    "actividad": "Traer leña o combustible",
+    "mujeres_hrs_sem": 0.13,
+    "hombres_hrs_sem": 0.14,
+    "diferencia": -0.01,
+    "categoria": "Doméstico",
+    "subcategoria": "Abastecimiento",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc16",
+    "actividad": "Llevar al parque",
+    "mujeres_hrs_sem": 0.12,
+    "hombres_hrs_sem": 0.04,
+    "diferencia": 0.08,
+    "categoria": "Cuidado",
+    "subcategoria": "Actividades recreativas",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tv7",
+    "actividad": "Otras actividades voluntarias",
+    "mujeres_hrs_sem": 0.11,
+    "hombres_hrs_sem": 0.14,
+    "diferencia": -0.03,
+    "categoria": "Voluntariado",
+    "subcategoria": "Otras",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc1",
+    "actividad": "Cuidado de niños 0-5 años (fisiológico)",
+    "mujeres_hrs_sem": 0.10,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.09,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado infantil",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc26",
+    "actividad": "Cuidado de adultos mayores 65+ años (detallado)",
+    "mujeres_hrs_sem": 0.08,
+    "hombres_hrs_sem": 0.06,
+    "diferencia": 0.02,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos mayores",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc8",
+    "actividad": "Apoyo escolar a niños 6-12 años",
+    "mujeres_hrs_sem": 0.07,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.06,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo educativo",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc25",
+    "actividad": "Cuidado de adultos 18-64 años (detallado)",
+    "mujeres_hrs_sem": 0.06,
+    "hombres_hrs_sem": 0.03,
+    "diferencia": 0.03,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc21",
+    "actividad": "Traslados por cuidado",
+    "mujeres_hrs_sem": 0.06,
+    "hombres_hrs_sem": 0.07,
+    "diferencia": -0.01,
+    "categoria": "Cuidado",
+    "subcategoria": "Traslados",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc17",
+    "actividad": "Aconsejar y consolar",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.02,
+    "diferencia": 0.02,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo emocional",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc27",
+    "actividad": "Cuidado de personas con discapacidad (detallado)",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.01,
+    "diferencia": 0.03,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de discapacidad",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc34",
+    "actividad": "Otras actividades de cuidado",
+    "mujeres_hrs_sem": 0.04,
+    "hombres_hrs_sem": 0.09,
+    "diferencia": -0.05,
+    "categoria": "Cuidado",
+    "subcategoria": "Otras",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc31",
+    "actividad": "Apoyo emocional a adultos mayores",
+    "mujeres_hrs_sem": 0.01,
+    "hombres_hrs_sem": 0.14,
+    "diferencia": -0.13,
+    "categoria": "Cuidado",
+    "subcategoria": "Apoyo emocional",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc6",
+    "actividad": "Cuidado de personas con discapacidad (fisiológico)",
+    "mujeres_hrs_sem": 0.00,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.00,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de discapacidad",
+    "pais": "Chile"
+  },
+  {
+    "codigo": "tc5",
+    "actividad": "Cuidado de adultos mayores 65+ años (fisiológico)",
+    "mujeres_hrs_sem": 0.00,
+    "hombres_hrs_sem": 0.00,
+    "diferencia": 0.00,
+    "categoria": "Cuidado",
+    "subcategoria": "Cuidado de adultos mayores",
+    "pais": "Chile"
+  }
+]
