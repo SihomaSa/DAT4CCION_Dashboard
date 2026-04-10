@@ -9,16 +9,6 @@
     <h1>{{ paisSeleccionado }} - Trabajo No Remunerado</h1>
     <p>Horas semanales promedio dedicadas a trabajo doméstico y de cuidado no remunerado</p>
   </div>
-  <div class="acciones-container">
-  <button class="btn-analisis" (click)="abrirAnalisisActividades()">
-    📊 Análisis de Actividades No Remuneradas
-  </button>
-</div>
-<app-actividades 
-  [visible]="actividadesModalVisible" 
-  (close)="cerrarAnalisisActividades()">
-</app-actividades>
-  <!-- Filtros -->
   <div class="filtros-container">
     <div class="filtro-group">
       <label for="pais">País:</label>
@@ -42,6 +32,12 @@
           👨 Hombres
         </button>
       </div>
+    </div>
+
+    <div class="filtro-group">
+      <button class="btn-analisis-inline" (click)="abrirAnalisisActividades()">
+        📊 Análisis de Actividades No Remuneradas - {{ paisSeleccionado }}
+      </button>
     </div>
   </div>
 
@@ -122,3 +118,9 @@
     </div>
   </div>
 </div>
+
+<app-actividades 
+  [visible]="actividadesModalVisible" 
+  [paisActual]="paisSeleccionado"
+  (close)="cerrarAnalisisActividades()">
+</app-actividades>

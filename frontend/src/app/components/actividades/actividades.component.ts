@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActividadesService, Actividad } from '../../services/actividades.service';
@@ -8,8 +8,9 @@ import { ActividadesService, Actividad } from '../../services/actividades.servic
   templateUrl: './actividades.component.html',
   styleUrls: ['./actividades.component.scss']
 })
-export class ActividadesComponent implements OnInit {
+export class ActividadesComponent implements OnInit, OnChanges {
   @Input() visible = false;
+  @Input() paisActual: string = 'Mexico';
   @Output() close = new EventEmitter<void>();
   
   actividades: Actividad[] = [];
@@ -29,6 +30,13 @@ export class ActividadesComponent implements OnInit {
   
   ngOnInit() {
     this.cargarPaises();
+  }
+  
+  ngOnChanges(changes: any) {
+    if (changes.paisActual && changes.paisActual.currentValue) {
+      this.paisSeleccionado = this.paisActual;
+      this.cargarActividades();
+    }
   }
   
   cargarPaises() {
