@@ -1,0 +1,49 @@
+﻿codigo,actividad,mujeres_hrs_sem,hombres_hrs_sem,diferencia
+TOTAL_DOMESTICO,TOTAL TRABAJO DOMÉSTICO NO REMUNERADO,29.22,15.82,13.4
+td5,Reparar y mantener ropa y calzado,5.94,2.2,3.74
+td1,Preparar alimentos y bebidas,5.16,2.28,2.88
+TOTAL_VOLUNTARIADO,TOTAL TRABAJO VOLUNTARIO,3.69,2.42,1.27
+TOTAL_CUIDADO,TOTAL TRABAJO DE CUIDADO NO REMUNERADO,2.67,1.67,1.01
+td25,Pagar cuentas virtuales,2.38,1.87,0.51
+td4,"Lavar, secar y planchar ropa",2.1,0.61,1.5
+td3,Lavar la vajilla,2.06,0.81,1.24
+td7,Mantener y reparar la vivienda,1.55,0.54,1.01
+td22,Recoger ropa de lavandería,1.54,1.13,0.4
+td26,Otras actividades domésticas,1.19,0.55,0.64
+tv2,Trabajo voluntario en educación,1.17,1.11,0.06
+td20,Preparar conservas,1.15,0.98,0.16
+td8,Mantener y reparar bienes del hogar,1.15,0.37,0.78
+td9,Compras del hogar,1.1,0.2,0.9
+td2,Servir alimentos y limpiar el lugar donde se comió,1.02,0.53,0.49
+tv1,Trabajo voluntario en salud,0.95,0.41,0.54
+tv4,Trabajo voluntario en actividades religiosas,0.92,0.36,0.57
+td23,Llevar/recoger a reparaciones,0.77,0.57,0.2
+td16,Traer agua,0.51,0.45,0.06
+td12,Cuidar mascotas,0.5,0.41,0.09
+td6,Limpiar la vivienda,0.47,0.42,0.05
+tc15,Leer cuentos,0.38,0.27,0.11
+tc7,Apoyo escolar a niños 0-5 años,0.38,0.24,0.14
+tc12,Acompañar a centros de salud,0.36,0.32,0.04
+tv6,Trabajo voluntario en emergencias,0.36,0.33,0.02
+tc4,Cuidado de adultos 18-64 años (fisiológico),0.29,0.18,0.12
+tc22,Cuidado de niños 0-5 años (detallado),0.26,0.15,0.11
+tc3,Cuidado de adolescentes 13-17 años (fisiológico),0.2,0.02,0.18
+td10,Pagar cuentas y hacer trámites,0.19,0.93,-0.74
+tc2,Cuidado de niños 6-12 años (fisiológico),0.18,0.02,0.16
+tv3,Trabajo voluntario en organización comunitaria,0.18,0.08,0.1
+td14,Traslados por trabajo doméstico,0.17,0.12,0.06
+td11,Organizar y supervisar actividades del hogar,0.13,0.69,-0.57
+td17,Traer leña o combustible,0.13,0.14,-0.01
+tc16,Llevar al parque,0.12,0.04,0.09
+tv7,Otras actividades voluntarias,0.11,0.14,-0.02
+tc1,Cuidado de niños 0-5 años (fisiológico),0.1,0.01,0.1
+tc26,Cuidado de adultos mayores 65+ años (detallado),0.08,0.06,0.02
+tc8,Apoyo escolar a niños 6-12 años,0.07,0.01,0.07
+tc25,Cuidado de adultos 18-64 años (detallado),0.06,0.03,0.02
+tc21,Traslados por cuidado,0.06,0.07,-0.02
+tc17,Aconsejar y consolar,0.04,0.02,0.02
+tc27,Cuidado de personas con discapacidad (detallado),0.04,0.01,0.03
+tc34,Otras actividades de cuidado,0.04,0.09,-0.05
+tc31,Apoyo emocional a adultos mayores,0.01,0.14,-0.13
+tc6,Cuidado de personas con discapacidad (fisiológico),0.0,0.0,0.0
+tc5,Cuidado de adultos mayores 65+ años (fisiológico),0.0,0.0,0.0

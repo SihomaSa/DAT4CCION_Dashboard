@@ -1,0 +1,33 @@
+﻿codigo,actividad,mujeres_hrs_sem,hombres_hrs_sem,diferencia
+cuidado_pasivo,Estar pendiente (cuidado pasivo),19.6,5.02,14.58
+prep_alimentos,Preparar y servir alimentos,9.0,1.63,7.37
+limpiar_vivienda,Limpiar la vivienda,6.23,1.89,4.34
+lavar_ropa,"Lavar, planchar y guardar ropa",3.35,0.58,2.76
+lavar_loza,Levantar platos y lavar loza,2.86,0.79,2.08
+jugar,Jugar con niños,1.14,0.64,0.5
+compras_virtual,Compras personales/hogar (virtual),1.09,1.13,-0.04
+alimentar,Alimentar o ayudar a comer,1.02,0.12,0.9
+apoyo_escolar,Ayudar con tareas escolares,0.85,0.17,0.68
+banar_vestir,"Bañar, vestir y arreglar",0.62,0.05,0.56
+cuidar_mascotas,Cuidar mascotas,0.53,0.42,0.11
+aconsejar,Aconsejar o consolar,0.25,0.17,0.09
+cuidar_jardin,Cuidar jardín y plantas,0.23,0.13,0.09
+leer_cuentos,Leer cuentos,0.12,0.04,0.09
+reparar_ropa,Reparar ropa y calzado,0.11,0.01,0.11
+llevar_parque,Llevar al parque,0.08,0.04,0.04
+dar_medicamentos,Suministrar medicamentos y terapias,0.07,0.02,0.05
+acompanar_citas,Acompañar a citas médicas,0.06,0.03,0.03
+preparar_conservas,"Preparar conservas, quesos y bebidas",0.05,0.01,0.04
+supervisar_hogar,Dirigir y supervisar actividades del hogar,0.04,0.01,0.03
+elaborar_ropa,Elaborar prendas de vestir,0.04,0.0,0.04
+reparar_vivienda,Reparar y mantener vivienda,0.02,0.39,-0.37
+llevar_comida,Llevar comida a sitio de trabajo/estudio,0.02,0.01,0.01
+traer_agua,Traer agua para el hogar,0.02,0.08,-0.06
+compras_presencial,Compras personales/hogar (presencial),0.02,0.02,-0.0
+construir_vivienda,Construir o ampliar vivienda,0.01,0.07,-0.07
+traer_lena,Traer leña o combustibles,0.01,0.06,-0.05
+limpiar_vehiculo,Limpiar vehículo propio,0.01,0.15,-0.14
+pagar_facturas,Pagar facturas y trámites,0.01,0.01,-0.0
+reparar_electrodomesticos,Reparar electrodomésticos y muebles,0.0,0.09,-0.08
+comprar_medicamentos,Comprar medicamentos,0.0,0.0,0.0
+llevar_escuela,Llevar/traer niños al estudio,0.0,0.0,0.0

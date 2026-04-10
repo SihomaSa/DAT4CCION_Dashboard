@@ -298,13 +298,12 @@ export class MapaComponent implements AfterViewInit, OnChanges {
   }
 
   private getColorByHours(horas: number): string {
-    if (horas <= 20) return '#FFF5F5';
-    if (horas <= 25) return '#FFD4D4';
-    if (horas <= 30) return '#FFA8A8';
-    if (horas <= 35) return '#FF8A8A';
-    if (horas <= 40) return '#FF5252';
-    if (horas <= 50) return '#FF0000';
-    if (horas <= 60) return '#CC0000';
-    return '#8B0000';
+    // Paleta Dataacción 2026
+    if (horas <= 20) return '#F9D5B4';  // $color-hours-low
+    if (horas <= 28) return '#F4A261';  // $color-hours-mid-low
+    if (horas <= 36) return '#E76F51';  // $color-hours-mid
+    if (horas <= 44) return '#D35400';  // $color-hours-mid-high
+    if (horas <= 52) return '#8C3A2B';  // $color-hours-high
+    return '#5A2C23';                    // $color-hours-very-high
   }
 }
