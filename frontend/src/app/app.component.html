@@ -1,410 +1,78 @@
-<div class="app-shell" (click)="deptoDropOpen && (deptoDropOpen = false)">
-
-  <!-- ══ TOPBAR ══════════════════════════════════════════════════════════ -->
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand-dot"></div>
-      <div>
-        <div class="brand-title">ONU MUJERES</div>
-        <div class="brand-sub">DAT4CCIÓN 2026 · América Latina</div>
-      </div>
-    </div>
-    <nav class="nav-tabs">
-      <button class="tab" [class.active]="vistaActiva==='horas'"     (click)="cambiarVista('horas')">
-        <span class="tab-dot"></span>Horas de cuidado
-      </button>
-      <button class="tab" [class.active]="vistaActiva==='tipo'"      (click)="cambiarVista('tipo')">
-        ⚖&nbsp;Tipo de cuidado
-      </button>
-      <button class="tab" [class.active]="vistaActiva==='economico'" (click)="cambiarVista('economico')">
-        $&nbsp;Valor económico
-      </button>
-    </nav>
-    <div class="badge-data">DATA</div>
-  </header>
-
-  <!-- ══ BARRA DE FILTROS POWER BI ════════════════════════════════════════ -->
-  <div class="filter-bar">
-
-    <!-- ① SEXO -->
-    <div class="filter-group">
-      <span class="filter-label">SEXO</span>
-      <div class="filter-pills">
-        <button class="pill" [class.pill-on]="sexoFiltro==='ambos'"
-                (click)="setSexo('ambos')">Ambos</button>
-        <button class="pill pill-f" [class.pill-on]="sexoFiltro==='femenino'"
-                (click)="setSexo('femenino')">♀ Femenino</button>
-        <button class="pill pill-m" [class.pill-on]="sexoFiltro==='masculino'"
-                (click)="setSexo('masculino')">♂ Masculino</button>
-      </div>
+<div class="dashboard-container">
+  <!-- Filtros -->
+  <div class="filtros-container">
+    <div class="filtro-group">
+      <label for="pais">País:</label>
+      <select id="pais" [(ngModel)]="paisSeleccionado" (change)="onPaisChange(paisSeleccionado)">
+        <option *ngFor="let pais of paises" [value]="pais">{{ pais }}</option>
+      </select>
     </div>
 
-    <div class="filter-sep"></div>
-
-    <!-- ② PAÍS -->
-    <div class="filter-group">
-      <span class="filter-label">PAÍS</span>
-      <div class="filter-pills">
-        <button *ngFor="let p of PAISES" class="pill"
-                [class.pill-on]="paisSeleccionado === p.key"
-                [disabled]="!p.disponible"
-                (click)="p.disponible && cargarPais(p.key)">
-          {{ p.emoji }}&nbsp;{{ p.label }}
-          <span class="pill-next" *ngIf="!p.disponible">próx.</span>
+    <div class="filtro-group">
+      <label>Sexo:</label>
+      <div class="sexo-buttons">
+        <button 
+          [class.active]="sexoSeleccionado === 'mujeres'"
+          (click)="onSexoChange('mujeres')">
+          👩 Mujeres
+        </button>
+        <button 
+          [class.active]="sexoSeleccionado === 'hombres'"
+          (click)="onSexoChange('hombres')">
+          👨 Hombres
         </button>
       </div>
     </div>
+  </div>
 
-    <div class="filter-sep"></div>
+  <!-- Mapa -->
+  <div *ngIf="!cargando" class="mapa-container">
+    <app-mapa 
+      [pais]="paisSeleccionado"
+      [sexo]="sexoSeleccionado"
+      [datos]="datosUnidades">
+    </app-mapa>
+  </div>
 
-    <!-- ③ DEPARTAMENTO / DISTRITO -->
-    <div class="filter-group">
-      <span class="filter-label">DEPARTAMENTO</span>
-      <div class="depto-dropdown" (click)="$event.stopPropagation()">
-        <button class="depto-btn" (click)="deptoDropOpen = !deptoDropOpen">
-          <span class="depto-val">
-            {{ deptoFiltro === 'todos' ? 'Todos los departamentos' : titleCase(deptoFiltro) }}
-          </span>
-          <svg width="10" height="6" viewBox="0 0 10 6">
-            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"
-                  fill="none" stroke-linecap="round"/>
-          </svg>
-        </button>
-        <div class="depto-menu" *ngIf="deptoDropOpen">
-          <div class="depto-search-wrap">
-            <input class="depto-search" [(ngModel)]="deptoSearch"
-                   placeholder="Buscar departamento…" (click)="$event.stopPropagation()">
-          </div>
-          <div class="depto-item"
-               [class.depto-item-on]="deptoFiltro==='todos'"
-               (click)="setDepto('todos')">
-            Todos los departamentos
-          </div>
-          <div class="depto-item" *ngFor="let d of departamentosFiltrados"
-               [class.depto-item-on]="deptoFiltro === d"
-               (click)="setDepto(d)">
-            {{ titleCase(d) }}
-          </div>
-          <div class="depto-empty" *ngIf="departamentosFiltrados.length === 0">
-            Sin resultados
-          </div>
-        </div>
-      </div>
+  <!-- Leyenda actualizada -->
+
+  <div class="leyenda">
+    <span><strong>Horas semanales:</strong></span>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #FFF5F5;"></div>
+      <span>Menos de 35 hrs</span>
     </div>
-
-    <!-- ④ Limpiar filtros -->
-    <button class="clear-btn" *ngIf="filtrosActivos > 0" (click)="limpiarFiltros()">
-      ✕ Limpiar ({{ filtrosActivos }})
-    </button>
-
-    <!-- Chip resumen activo -->
-    <div class="active-chips">
-      <div class="chip" *ngIf="sexoFiltro !== 'ambos'">
-        {{ sexoFiltro === 'femenino' ? '♀ Femenino' : '♂ Masculino' }}
-        <span class="chip-x" (click)="setSexo('ambos')">×</span>
-      </div>
-      <div class="chip" *ngIf="deptoFiltro !== 'todos'">
-        {{ titleCase(deptoFiltro) }}
-        <span class="chip-x" (click)="setDepto('todos')">×</span>
-      </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #FFD4D4;"></div>
+      <span>35 - 40 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #FFA8A8;"></div>
+      <span>40 - 45 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #FF8A8A;"></div>
+      <span>45 - 50 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #FF5252;"></div>
+      <span>50 - 55 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #FF0000;"></div>
+      <span>55 - 60 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #8B0000;"></div>
+      <span>Más de 60 hrs</span>
     </div>
   </div>
 
-  <!-- ══ LOADING / ERROR ════════════════════════════════════════════════ -->
-  <div class="loading" *ngIf="cargando && !error">
-    <div class="spinner"></div><span>Cargando datos ENUT…</span>
+  <!-- Resumen -->
+  <div *ngIf="!cargando" class="stats-resumen">
+    <div class="stat-card">
+      <div class="stat-label">Promedio {{ paisSeleccionado }}</div>
+      <div class="stat-value">{{ calcularPromedio() | number:'1.1-1' }} hrs/sem</div>
+    </div>
   </div>
-  <div class="error-bar" *ngIf="error">⚠ {{ error }}</div>
-
-  <!-- ══ MAIN ════════════════════════════════════════════════════════════ -->
-  <div class="main-grid" *ngIf="!cargando && !error">
-
-    <!-- ─── COLUMNA IZQUIERDA ─────────────────────────────────────────── -->
-    <section class="col-main">
-
-      <!-- KPI ROW -->
-      <div class="kpi-row" *ngIf="paisActual">
-        <div class="kpi-card kpi-card--hi">
-          <div class="kpi-label">{{ kpiLabel }} · horas semanales</div>
-          <div class="kpi-value orange">{{ fmt(kpiHoras) }} hrs/sem</div>
-          <div class="kpi-sub">
-            {{ deptoFiltro !== 'todos' ? titleCase(deptoFiltro) : 'Promedio nacional' }}
-            · ENUT {{ paisActual.anio_enut }}
-          </div>
-        </div>
-        <div class="kpi-card" *ngIf="sexoFiltro !== 'femenino'">
-          <div class="kpi-label">Brecha de género</div>
-          <div class="kpi-value">+{{ fmt(valorBrecha) }} hrs</div>
-          <div class="kpi-sub">Mujeres − Hombres · semana</div>
-        </div>
-        <div class="kpi-card" *ngIf="deptoFiltro === 'todos' && territorial.length">
-          <div class="kpi-label">Mayor brecha departamental</div>
-          <div class="kpi-value orange">
-            {{ titleCase(territorial[0].nombre) }} · {{ fmt(territorial[0].brecha) }} hrs
-          </div>
-          <div class="kpi-sub">Mín: {{ titleCase(territorial[territorial.length-1].nombre) }}</div>
-        </div>
-        <div class="kpi-card" *ngIf="deptoFiltro !== 'todos' && deptoActual">
-          <div class="kpi-label">% trabajo realizado por mujeres</div>
-          <div class="kpi-value orange">{{ pctMujeres }}%</div>
-          <div class="kpi-sub">{{ titleCase(deptoActual.nombre) }}</div>
-        </div>
-      </div>
-
-      <!-- ── VISTA HORAS ───────────────────────────────────────────────── -->
-      <ng-container *ngIf="vistaActiva === 'horas'">
-        <div class="two-col">
-          <div class="chart-card">
-            <div class="chart-header">
-              <div class="chart-title">Horas por componente</div>
-              <div class="chart-sub">Doméstico (3xx) · Cuidado (4xx) · ENUT 2024</div>
-            </div>
-            <div class="chart-wrap"><canvas #barChartCanvas></canvas></div>
-          </div>
-
-          <div class="chart-card">
-            <div class="chart-header">
-              <div class="chart-title">Comparativo regional</div>
-              <div class="chart-sub">Horas semanales mujeres · Fuentes ENUT nacionales</div>
-            </div>
-            <table class="comp-table" *ngIf="comparativo.length">
-              <thead>
-                <tr>
-                  <th>País</th>
-                  <th *ngIf="sexoFiltro !== 'masculino'">Mujeres</th>
-                  <th *ngIf="sexoFiltro !== 'femenino'">Hombres</th>
-                  <th>Brecha</th>
-                  <th>Año</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let c of comparativo"
-                    [class.fila-activa]="c.iso === (paisActual?.iso || '')">
-                  <td class="pais-cell">{{ c.nombre }}</td>
-                  <td class="val-mujeres" *ngIf="sexoFiltro !== 'masculino'">{{ fmt(c.mujeres) }}h</td>
-                  <td class="val-hombres" *ngIf="sexoFiltro !== 'femenino'">{{ fmt(c.hombres) }}h</td>
-                  <td class="val-brecha">+{{ fmt(c.brecha) }}h</td>
-                  <td class="muted">{{ c.anio }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="chart-card chart-card--tall">
-          <div class="chart-header">
-            <div class="chart-title">
-              Trabajo no remunerado por departamento
-              <span class="title-badge" *ngIf="deptoFiltro !== 'todos'">
-                {{ titleCase(deptoFiltro) }}
-              </span>
-            </div>
-            <div class="chart-sub">Horas semanales · Clic para filtrar · Ordenado por brecha</div>
-          </div>
-          <div class="chart-wrap chart-wrap--tall">
-            <canvas #territorialChartCanvas></canvas>
-          </div>
-        </div>
-      </ng-container>
-
-      <!-- ── VISTA TIPO ────────────────────────────────────────────────── -->
-      <ng-container *ngIf="vistaActiva === 'tipo'">
-        <div class="two-col">
-          <div class="chart-card">
-            <div class="chart-header">
-              <div class="chart-title">Doméstico vs Cuidado directo</div>
-              <div class="chart-sub">Clasificación CAUTAL · 3xx = doméstico · 4xx = cuidado</div>
-            </div>
-            <div class="chart-wrap"><canvas #tipoChartCanvas></canvas></div>
-          </div>
-
-          <div class="chart-card">
-            <div class="chart-header">
-              <div class="chart-title">Actividades más demandantes</div>
-              <div class="chart-sub">Horas semanales por actividad CAUTAL</div>
-            </div>
-            <div class="act-scroll">
-              <div class="act-row" *ngFor="let a of tipoCuidado.slice(0,10)">
-                <div class="act-info">
-                  <span class="act-badge" [class.cuidado]="a.tipo==='cuidado'">{{ a.codigo }}</span>
-                  <span class="act-name">{{ a.actividad }}</span>
-                </div>
-                <div class="act-bars">
-                  <div class="bar-line" *ngIf="sexoFiltro !== 'masculino'">
-                    <span class="bar-lbl bar-lbl-f">♀</span>
-                    <div class="bar-track">
-                      <div class="bar-fill bar-m"
-                           [style.width]="barPct(a.mujeres, tipoCuidado[0].mujeres || 10)"></div>
-                    </div>
-                    <span class="bar-val">{{ fmt(a.mujeres) }}h</span>
-                  </div>
-                  <div class="bar-line" *ngIf="sexoFiltro !== 'femenino'">
-                    <span class="bar-lbl bar-lbl-h">♂</span>
-                    <div class="bar-track">
-                      <div class="bar-fill bar-h"
-                           [style.width]="barPct(a.hombres, tipoCuidado[0].mujeres || 10)"></div>
-                    </div>
-                    <span class="bar-val">{{ fmt(a.hombres) }}h</span>
-                  </div>
-                </div>
-              </div>
-              <div class="no-data" *ngIf="tipoCuidado.length === 0">Sin datos disponibles.</div>
-            </div>
-          </div>
-        </div>
-      </ng-container>
-
-      <!-- ── VISTA ECO ──────────────────────────────────────────────────── -->
-      <ng-container *ngIf="vistaActiva === 'economico' && valorEconomico">
-        <div class="eco-grid">
-          <div class="eco-card eco-card--hi" *ngIf="sexoFiltro !== 'masculino'">
-            <div class="eco-label">Valor anual · Mujeres</div>
-            <div class="eco-value orange">{{ fmtUsd(valorEconomico!.valor_anual_mujeres_usd) }}</div>
-            <div class="eco-sub">{{ fmt(valorMujeres) }} hrs/sem × 52 × USD {{ valorEconomico!.salario_hora_usd }}/hr</div>
-          </div>
-          <div class="eco-card" *ngIf="sexoFiltro !== 'femenino'">
-            <div class="eco-label">Valor anual · Hombres</div>
-            <div class="eco-value muted">{{ fmtUsd(valorEconomico!.valor_anual_hombres_usd) }}</div>
-            <div class="eco-sub">{{ fmt(valorHombres) }} hrs/sem × 52 × USD {{ valorEconomico!.salario_hora_usd }}/hr</div>
-          </div>
-          <div class="eco-card">
-            <div class="eco-label">% del PBI estimado</div>
-            <div class="eco-value orange">~{{ valorEconomico!.pct_pbi }}%</div>
-            <div class="eco-sub">Estimación CEPAL–ONU Mujeres</div>
-          </div>
-          <div class="eco-card">
-            <div class="eco-label">Salario base / hora</div>
-            <div class="eco-value muted">USD {{ valorEconomico!.salario_hora_usd }}</div>
-            <div class="eco-sub">{{ valorEconomico!.nota }}</div>
-          </div>
-        </div>
-        <div class="chart-card">
-          <div class="chart-header">
-            <div class="chart-title">Valor económico por departamento (top 10)</div>
-            <div class="chart-sub">USD por persona por año · RMV 2024</div>
-          </div>
-          <div class="chart-wrap"><canvas #ecoChartCanvas></canvas></div>
-        </div>
-      </ng-container>
-
-    </section>
-
-    <!-- ─── PANEL DERECHO ─────────────────────────────────────────────── -->
-    <aside class="col-panel">
-      <div class="panel-eyebrow">PANEL DE DATOS</div>
-      <div class="panel-titulo">Carga de trabajo no remunerado</div>
-      <div class="panel-desc">
-        Horas semanales promedio · {{ paisActual?.fuente }}
-      </div>
-
-      <div class="panel-divider"></div>
-
-      <!-- Filtro resumen visual -->
-      <div class="panel-filtro-estado">
-        <div class="pfe-row">
-          <span class="pfe-label">Sexo</span>
-          <span class="pfe-val" [class.pfe-orange]="sexoFiltro !== 'ambos'">
-            {{ sexoFiltro === 'ambos' ? 'Ambos' : sexoFiltro === 'femenino' ? '♀ Femenino' : '♂ Masculino' }}
-          </span>
-        </div>
-        <div class="pfe-row">
-          <span class="pfe-label">País</span>
-          <span class="pfe-val">{{ paisActual?.nombre }}</span>
-        </div>
-        <div class="pfe-row">
-          <span class="pfe-label">Departamento</span>
-          <span class="pfe-val" [class.pfe-orange]="deptoFiltro !== 'todos'">
-            {{ deptoFiltro === 'todos' ? 'Todos' : titleCase(deptoFiltro) }}
-          </span>
-        </div>
-      </div>
-
-      <div class="panel-divider"></div>
-      <div class="panel-lugar">{{ lugarNombre }}</div>
-      <div class="panel-subtitulo">
-        {{ deptoFiltro !== 'todos' ? 'Departamento' : 'Nacional' }}
-        · ENUT {{ paisActual?.anio_enut }}
-      </div>
-
-      <!-- Barras de stats -->
-      <div class="stat-block" *ngIf="sexoFiltro !== 'masculino'">
-        <div class="stat-label">♀ HORAS SEMANALES · MUJERES</div>
-        <div class="stat-value orange">{{ fmt(valorMujeres) }} hrs</div>
-        <div class="stat-track">
-          <div class="stat-fill stat-m" [style.width]="barPct(valorMujeres)"></div>
-        </div>
-      </div>
-
-      <div class="stat-block" *ngIf="sexoFiltro !== 'femenino'">
-        <div class="stat-label">♂ HORAS SEMANALES · HOMBRES</div>
-        <div class="stat-value muted">{{ fmt(valorHombres) }} hrs</div>
-        <div class="stat-track">
-          <div class="stat-fill stat-h" [style.width]="barPct(valorHombres)"></div>
-        </div>
-      </div>
-
-      <div class="stat-block" *ngIf="sexoFiltro === 'ambos'">
-        <div class="stat-label">BRECHA RESPECTO A HOMBRES</div>
-        <div class="stat-value orange">+{{ fmt(valorBrecha) }} hrs</div>
-        <div class="stat-track">
-          <div class="stat-fill stat-b" [style.width]="barPct(valorBrecha, 35)"></div>
-        </div>
-      </div>
-
-      <div class="panel-divider"></div>
-
-      <!-- Donut -->
-      <div class="donut-row">
-        <div class="donut-wrap">
-          <canvas #donutChartCanvas width="100" height="100"></canvas>
-          <div class="donut-center">
-            <div class="donut-pct">{{ pctMujeres }}%</div>
-            <div class="donut-sub">mujeres</div>
-          </div>
-        </div>
-        <div class="donut-leg">
-          <div class="leg-row"><span class="leg-dot dot-m"></span>Mujeres · {{ fmt(valorMujeres) }}h</div>
-          <div class="leg-row"><span class="leg-dot dot-h"></span>Hombres · {{ fmt(valorHombres) }}h</div>
-          <div class="leg-ratio" *ngIf="paisActual">Ratio {{ fmt(paisActual.ratio) }}x</div>
-        </div>
-      </div>
-
-      <div class="panel-narrative">
-        Las mujeres en <strong>{{ lugarNombre }}</strong> dedican
-        <strong>{{ fmt(valorMujeres) }} horas</strong> semanales al trabajo no remunerado,
-        <strong>{{ fmt(valorBrecha) }} horas más</strong> que los hombres.
-      </div>
-
-      <div class="panel-divider"></div>
-
-      <!-- Top departamentos con brecha -->
-      <div class="panel-subtitle">Top departamentos · mayor brecha</div>
-      <div class="region-list">
-        <div class="region-item" *ngFor="let r of topRegiones"
-             [class.region-activa]="deptoFiltro === r.nombre"
-             (click)="setDepto(r.nombre)">
-          <div class="region-nombre">{{ titleCase(r.nombre) }}</div>
-          <div class="region-stats">
-            <span class="rv-m" *ngIf="sexoFiltro !== 'masculino'">♀ {{ fmt(r.mujeres) }}h</span>
-            <span class="rv-h" *ngIf="sexoFiltro !== 'femenino'">♂ {{ fmt(r.hombres) }}h</span>
-            <span class="rv-b">Δ{{ fmt(r.brecha) }}h</span>
-          </div>
-          <div class="region-track">
-            <div class="region-fill" [style.width]="brechaPct(r.brecha)"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel-footer">
-        <div>{{ paisActual?.fuente }}</div>
-        <div>CAUTAL · Trabajo no remunerado 3xx + 4xx</div>
-        <div style="margin-top:8px">Yovany Romero · Shirley Sosa · Glisse Jorge Malca</div>
-      </div>
-    </aside>
-  </div>
-
-  <footer class="footer" *ngIf="!cargando">
-    <span>Fuente: INEI Perú — ENUT 2024 · DAT4CCIÓN 2026 · ONU Mujeres</span>
-    <span>CAUTAL · Población 15+ años · Trabajo no remunerado 3xx + 4xx</span>
-  </footer>
 </div>

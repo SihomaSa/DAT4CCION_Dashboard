@@ -1,6 +1,28 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; background: #0d0705; }
-body { font-family: 'Inter', 'Segoe UI', sans-serif; }
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #1a0f0a; }
-::-webkit-scrollbar-thumb { background: #5B3A2D; border-radius: 3px; }
+/* ─── GLOBAL STYLES — DAT4CCIÓN 2026 ───────────────────────────────────── */
+/* Sobreescribe el fondo oscuro del template Angular por defecto            */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: #F5F0ED;   /* warm cream — overrides any dark default */
+  color: #1A0F0A;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* Scrollbar global warm */
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #EDE8E4; }
+::-webkit-scrollbar-thumb { background: rgba(193,68,14,.30); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(193,68,14,.50); }
+
+/* Quitar outline azul de botones */
+button:focus-visible { outline: 2px solid #C1440E; outline-offset: 2px; }
+button { font-family: inherit; }

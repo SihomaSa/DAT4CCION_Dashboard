@@ -17,7 +17,17 @@
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.json",
-            "styles": ["src/styles.scss"],
+            "styles": ["src/styles.scss",
+              "node_modules/leaflet/dist/leaflet.css"],
+            "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "**/*",
+                  "input": "node_modules/leaflet/dist/images",
+                  "output": "/assets"
+                }
+              ],
             "scripts": []
           },
           "configurations": {
