@@ -28,32 +28,32 @@
   </div>
  
   <div class="filtro-group">
-    <label>Sexo:</label>
+    <!-- <label>Sexo:</label> -->
     <div class="sexo-buttons">
       <button [class.active]="sexoSeleccionado === 'mujeres'" (click)="onSexoChange('mujeres')">
-        👩 Mujeres
+        👩 Horas de trabajo no remunerado
 
       </button>
       <!-- <button [class.active]="sexoSeleccionado === 'hombres'" (click)="onSexoChange('hombres')">
         👨 Hombres
-      </button> -->
+      </button>  -->
     </div>
   </div>
- 
+ <!-- BOTÓN TOGGLE MODO ECONÓMICO -->
+  <div class="filtro-group">
+    <button class="btn-analisis-inline"
+            [class.btn-eco-on]="modoEco"
+            (click)="toggleModoEco()">
+      {{ modoEco ? '🗺️ Ver horas' : '💰 Análisis económico' }}
+    </button>
+  </div>
   <div class="filtro-group">
     <button class="btn-analisis-inline" (click)="abrirAnalisisActividades()">
       📊 Análisis de Actividades — {{ paisSeleccionado }}
     </button>
   </div>
  
-  <!-- BOTÓN TOGGLE MODO ECONÓMICO -->
-  <div class="filtro-group">
-    <button class="btn-analisis-inline"
-            [class.btn-eco-on]="modoEco"
-            (click)="toggleModoEco()">
-      {{ modoEco ? '🗺️ Ver horas' : '💰 Valor económico perdido' }}
-    </button>
-  </div>
+  
 </div>
 
   <!-- ── CUERPO ───────────────────────────────────────────────────────── -->
