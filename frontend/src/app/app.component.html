@@ -18,6 +18,7 @@
    <!-- Filtros -->
    
   <div class="filtros-container">
+
   <div class="filtro-group">
     <label for="pais">País:</label>
     <select id="pais" [(ngModel)]="paisSeleccionado" (change)="onPaisChange(paisSeleccionado)">
@@ -31,6 +32,7 @@
     <div class="sexo-buttons">
       <button [class.active]="sexoSeleccionado === 'mujeres'" (click)="onSexoChange('mujeres')">
         👩 Mujeres
+
       </button>
       <!-- <button [class.active]="sexoSeleccionado === 'hombres'" (click)="onSexoChange('hombres')">
         👨 Hombres
