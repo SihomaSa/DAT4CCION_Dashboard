@@ -24,6 +24,7 @@ $palette-text-light: #5A4A3E;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px 25px;
   gap: 40px;
 }
 
@@ -121,7 +122,7 @@ $palette-text-light: #5A4A3E;
 .dashboard-container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 20px;
+  // padding: 20px;
   width: 100%;
   
 }
@@ -130,11 +131,13 @@ $palette-text-light: #5A4A3E;
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 24px;
-  margin: 20px 0;
+  margin: 20px;
 }
 
 .mapa-column {
   min-width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .datos-column {
@@ -159,6 +162,7 @@ $palette-text-light: #5A4A3E;
   color: #93a5b4;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .panel-title {
@@ -190,7 +194,7 @@ $palette-text-light: #5A4A3E;
 }
 
 .card-value {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #f8fafc;
 }
@@ -369,7 +373,7 @@ $palette-text-light: #5A4A3E;
 
 /* Contenedor del mapa */
 .mapa-container {
-  margin: 20px 0;
+  margin-bottom: 6px;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -618,7 +622,7 @@ $cat-dim:       #64748b;
 
 .cat-stat-lbl {
   font-size: 9px;
-  color: $cat-dim;
+  color: $cat-text;
   width: 56px;
   flex-shrink: 0;
   font-weight: 600;
