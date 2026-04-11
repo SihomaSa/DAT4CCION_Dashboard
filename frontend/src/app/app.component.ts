@@ -25,8 +25,10 @@ export class AppComponent implements OnInit {
   paisSeleccionado = 'Latam';
   sexoSeleccionado: 'mujeres' | 'hombres' = 'mujeres';
   datosUnidades: UnidadTerritorial[] = [];
+  modoEco = false;
   cargando = true;
   actividadesModalVisible = false;
+ 
 
   // ── Categorías inline ──────────────────────────────────────────────────
   categoriasData:       CategoriaData[]     = [];
@@ -153,7 +155,9 @@ export class AppComponent implements OnInit {
       this.cargarDetalleUnPais('Doméstico', pais);
     });
   }
-
+  toggleModoEco() {
+    this.modoEco = !this.modoEco;
+  }
   toggleCategoria(cat: CategoriaComun) {
     // Si presionas el mismo botón activo, no hace nada (siempre hay una activa)
     if (this.categoriaActiva === cat) return;
@@ -222,4 +226,5 @@ export class AppComponent implements OnInit {
 
   abrirAnalisisActividades()  { this.actividadesModalVisible = true;  }
   cerrarAnalisisActividades() { this.actividadesModalVisible = false; }
+ 
 }

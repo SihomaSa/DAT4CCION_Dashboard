@@ -1,0 +1,116 @@
+<div class="eco-overlay" *ngIf="visible" (click)="closeModal()">
+  <div class="eco-modal" (click)="$event.stopPropagation()">
+
+    <!-- ── HEADER ────────────────────────────────────────────────────── -->
+    <div class="eco-header">
+      <div class="eco-header-left">
+        <span class="eco-header-icon">💰</span>
+        <div>
+          <h2 class="eco-title">Valor Económico Perdido</h2>
+          <p class="eco-subtitle">
+            Trabajo no remunerado de mujeres valorado al salario mínimo
+            {{ paisActual === 'Latam' ? '· Cada país con su propio salario mínimo' : '· ' + (paisConfig?.nombre ?? paisActual) }}
+          </p>
+        </div>
+      </div>
+      <button class="eco-close" (click)="closeModal()">✕</button>
+    </div>
+
+    <!-- ── FÓRMULA INFO ───────────────────────────────────────────────── -->
+    <div class="eco-formula-bar" *ngIf="paisConfig">
+      <div class="eco-formula-item">
+        <span class="eco-f-label">Salario mínimo</span>
+        <span class="eco-f-val">${{ paisConfig.salarioMinUSD }} USD/mes</span>
+      </div>
+      <span class="eco-f-sep">÷</span>
+      <div class="eco-formula-item">
+        <span class="eco-f-label">Horas mensuales</span>
+        <span class="eco-f-val">{{ paisConfig.horasSemana * paisConfig.semanasMes }} hrs</span>
+      </div>
+      <span class="eco-f-sep">=</span>
+      <div class="eco-formula-item eco-f-highlight">
+        <span class="eco-f-label">Precio hora</span>
+        <span class="eco-f-val">${{ precioHoraUSD }} USD/hr</span>
+      </div>
+      <span class="eco-f-sep">×</span>
+      <div class="eco-formula-item">
+        <span class="eco-f-label">Hrs/sem mujeres</span>
+        <span class="eco-f-val">× 4 semanas</span>
+      </div>
+      <span class="eco-f-sep">=</span>
+      <div class="eco-formula-item eco-f-result">
+        <span class="eco-f-label">Valor perdido</span>
+        <span class="eco-f-val">USD mensual</span>
+      </div>
+    </div>
+
+    <div class="eco-formula-bar eco-formula-latam" *ngIf="!paisConfig">
+      <span class="eco-f-info">
+        💡 Cada país usa su propio salario mínimo y tipo de cambio para calcular el valor en USD.
+        Fórmula: <strong>Horas mujeres × (Salario_min_USD ÷ Hrs_mensuales_legales) × 4</strong>
+      </span>
+    </div>
+
+    <!-- ── TOTALES ────────────────────────────────────────────────────── -->
+    <div class="eco-totals">
+      <div class="eco-total-card">
+        <div class="eco-total-label">
+          {{ paisActual === 'Latam' ? 'Total Latam (suma países)' : 'Total ' + (paisConfig?.nombre ?? paisActual) }}
+        </div>
+        <div class="eco-total-usd">{{ formatUSD(totalUSD) }}</div>
+        <div class="eco-total-sub">USD / mes no remunerado a mujeres</div>
+      </div>
+      <div class="eco-total-card eco-total-local" *ngIf="paisConfig">
+        <div class="eco-total-label">En moneda local ({{ paisConfig.moneda }})</div>
+        <div class="eco-total-usd">{{ totalLocal }}</div>
+        <div class="eco-total-sub">al tipo de cambio {{ paisConfig.tipoCambio }} por USD</div>
+      </div>
+    </div>
+
+    <!-- ── TABLA / BARRAS ─────────────────────────────────────────────── -->
+    <div class="eco-table-wrap">
+      <div class="eco-table-header">
+        <span>Departamento / País</span>
+        <span>Hrs/sem ♀</span>
+        <span>Brecha</span>
+        <span style="text-align:right">Valor USD/mes</span>
+      </div>
+
+      <div class="eco-row" *ngFor="let u of unidades; let i = index">
+        <div class="eco-rank">{{ i + 1 }}</div>
+
+        <div class="eco-nombre-col">
+          <span class="eco-nombre">{{ u.nombre }}</span>
+          <span class="eco-moneda-hint" *ngIf="!paisConfig && u.pais">
+            {{ u.pais }}
+          </span>
+          <!-- Barra proporcional -->
+          <div class="eco-bar-track">
+            <div class="eco-bar-fill" [style.width]="barPct(u.valor_usd)"></div>
+          </div>
+        </div>
+
+        <div class="eco-hrs">{{ u.horas_mujeres.toFixed(1) }}</div>
+
+        <div class="eco-brecha">
+          +{{ (u.horas_mujeres - u.horas_hombres).toFixed(1) }} hrs
+        </div>
+
+        <div class="eco-valor-col">
+          <div class="eco-valor-usd">{{ formatUSD(u.valor_usd) }}</div>
+          <div class="eco-valor-local" *ngIf="paisConfig">{{ u.valor_local }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── NOTA METODOLÓGICA ──────────────────────────────────────────── -->
+    <div class="eco-nota">
+      <strong>Metodología:</strong>
+      Precio/hora = Salario mínimo mensual (USD) ÷ (horas semanales legales × 4 semanas).
+      Valor perdido = Horas semanales promedio mujeres × Precio/hora × 4 semanas.
+      Solo se contabilizan las horas de mujeres para mostrar el valor no reconocido al trabajo femenino.
+      Tipos de cambio aproximados 2025: PEN 3.73 | COP 4,482 | UYU 40.5 | MXN 19.9 | CLP 960.
+    </div>
+
+  </div>
+</div>

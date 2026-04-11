@@ -7,12 +7,15 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { ActividadesComponent } from './components/actividades/actividades.component';
+import { EconomiaComponent } from './components/economia/economia.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MapaComponent,
-    ActividadesComponent
+    ActividadesComponent, 
+    EconomiaComponent
   ],
   imports: [
     BrowserModule,

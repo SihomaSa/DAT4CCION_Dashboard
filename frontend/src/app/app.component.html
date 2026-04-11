@@ -18,30 +18,41 @@
    <!-- Filtros -->
    
   <div class="filtros-container">
-    <div class="filtro-group">
-      <label for="pais">País:</label>
-      <select id="pais" [(ngModel)]="paisSeleccionado" (change)="onPaisChange(paisSeleccionado)">
-        <option value="Latam">🌎 Latinoamérica</option>
-        <option *ngFor="let pais of paises" [value]="pais">{{ pais }}</option>
-      </select>
-    </div>
-    <div class="filtro-group">
-      <label>Sexo:</label>
-      <div class="sexo-buttons">
-        <button [class.active]="sexoSeleccionado === 'mujeres'" (click)="onSexoChange('mujeres')">
-          👩 Mujeres
-        </button>
-        <button [class.active]="sexoSeleccionado === 'hombres'" (click)="onSexoChange('hombres')">
-          👨 Hombres
-        </button>
-      </div>
-    </div>
-    <div class="filtro-group">
-      <button class="btn-analisis-inline" (click)="abrirAnalisisActividades()">
-        📊 Análisis de Actividades — {{ paisSeleccionado }}
+  <div class="filtro-group">
+    <label for="pais">País:</label>
+    <select id="pais" [(ngModel)]="paisSeleccionado" (change)="onPaisChange(paisSeleccionado)">
+      <option value="Latam">🌎 Latinoamérica</option>
+      <option *ngFor="let pais of paises" [value]="pais">{{ pais }}</option>
+    </select>
+  </div>
+ 
+  <div class="filtro-group">
+    <label>Sexo:</label>
+    <div class="sexo-buttons">
+      <button [class.active]="sexoSeleccionado === 'mujeres'" (click)="onSexoChange('mujeres')">
+        👩 Mujeres
+      </button>
+      <button [class.active]="sexoSeleccionado === 'hombres'" (click)="onSexoChange('hombres')">
+        👨 Hombres
       </button>
     </div>
   </div>
+ 
+  <div class="filtro-group">
+    <button class="btn-analisis-inline" (click)="abrirAnalisisActividades()">
+      📊 Análisis de Actividades — {{ paisSeleccionado }}
+    </button>
+  </div>
+ 
+  <!-- BOTÓN TOGGLE MODO ECONÓMICO -->
+  <div class="filtro-group">
+    <button class="btn-analisis-inline"
+            [class.btn-eco-on]="modoEco"
+            (click)="toggleModoEco()">
+      {{ modoEco ? '🗺️ Ver horas' : '💰 Valor económico perdido' }}
+    </button>
+  </div>
+</div>
 
   <!-- ── CUERPO ───────────────────────────────────────────────────────── -->
   <div *ngIf="!cargando" class="mapa-layout">
@@ -52,38 +63,32 @@
         <app-mapa
           [pais]="paisSeleccionado"
           [sexo]="sexoSeleccionado"
-          [datos]="datosUnidades">
+          [datos]="datosUnidades"
+          [modoEco]="modoEco"
+          >
         </app-mapa>
       </div>
 
         <!-- Leyenda con paleta Dataacción 2026 -->
-  <div class="leyenda">
-    <span><strong>Horas semanales:</strong></span>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #F9D5B4;"></div>
-      <span>Menos de 20 hrs</span>
-    </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #F4A261;"></div>
-      <span>20 - 28 hrs</span>
-    </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #E76F51;"></div>
-      <span>29 - 36 hrs</span>
-    </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #D35400;"></div>
-      <span>37 - 44 hrs</span>
-    </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #8C3A2B;"></div>
-      <span>45 - 52 hrs</span>
-    </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #5A2C23;"></div>
-      <span>Más de 52 hrs</span>
-    </div>
-  </div>
+  <div class="leyenda" *ngIf="!modoEco">
+  <span><strong>Horas semanales:</strong></span>
+  <div class="leyenda-item"><div class="color-box" style="background:#F4A580;"></div><span>Menos de 20</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#E8844A;"></div><span>20–28</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#D4500F;"></div><span>29–36</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#A83509;"></div><span>37–44</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#7C2208;"></div><span>45–52</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#5A1A06;"></div><span>+52</span></div>
+</div>
+ 
+<div class="leyenda leyenda-eco" *ngIf="modoEco">
+  <span><strong>💰 Valor perdido (USD/mes):</strong></span>
+  <div class="leyenda-item"><div class="color-box" style="background:#6ee7b7;"></div><span>≤ $50</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#34d399;"></div><span>$51–80</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#10b981;"></div><span>$81–110</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#059669;"></div><span>$111–150</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#047857;"></div><span>$151–200</span></div>
+  <div class="leyenda-item"><div class="color-box" style="background:#065f46;"></div><span>+$200</span></div>
+</div>
     </div>
 
     <!-- PANEL DATOS -->
