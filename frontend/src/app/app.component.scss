@@ -18,6 +18,7 @@ $palette-text-light: #5A4A3E;
   margin: 0 auto;
   padding: 20px;
   width: 100%;
+  
 }
 
 .mapa-layout {
@@ -355,4 +356,290 @@ $palette-text-light: #5A4A3E;
   .leyenda-item span { font-size: 0.7rem; }
   .btn-analisis { padding: 10px 20px; font-size: 0.9rem; }
   .btn-analisis-inline { padding: 6px 12px; font-size: 0.8rem; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CATEGORÍAS INLINE — Panel lateral (NUEVO — no modifica estilos anteriores)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+// Variables locales para el panel oscuro del dashboard
+$cat-border:    rgba(148, 163, 184, 0.14);
+$cat-border-on: rgba(231, 111, 81, 0.45);
+$cat-bg:        rgba(255, 255, 255, 0.04);
+$cat-bg-on:     rgba(231, 111, 81, 0.08);
+$cat-orange:    #E76F51;
+$cat-orange-d:  #D35400;
+$cat-brown:     #8C3A2B;
+$cat-text:      #f8fafc;
+$cat-muted:     #94a3b8;
+$cat-dim:       #64748b;
+
+.cat-title {
+  margin-top: 4px !important;
+}
+
+/* ── Pills de filtro rápido ──────────────────────────────────────────────── */
+.cat-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 8px;
+}
+
+.cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid $cat-border;
+  background: $cat-bg;
+  color: $cat-muted;
+  font-size: 11px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-color: $cat-orange;
+    color: $cat-orange;
+    background: rgba(231, 111, 81, 0.10);
+  }
+
+  &.cat-pill-on {
+    background: $cat-orange-d;
+    border-color: $cat-orange-d;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(211, 84, 0, 0.30);
+  }
+}
+
+/* ── Tarjeta de categoría ────────────────────────────────────────────────── */
+.cat-card {
+  background: $cat-bg;
+  border: 1px solid $cat-border;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: rgba(231, 111, 81, 0.30);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  &.cat-card-active {
+    border-color: $cat-border-on;
+    background: $cat-bg-on;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+  }
+}
+
+.cat-card-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.cat-card-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.cat-card-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: $cat-text;
+  flex: 1;
+}
+
+.cat-card-pct {
+  font-size: 10px;
+  font-weight: 700;
+  color: $cat-orange;
+  background: rgba(231, 111, 81, 0.15);
+  border: 1px solid rgba(231, 111, 81, 0.35);
+  border-radius: 10px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+/* Barras dentro de tarjeta */
+.cat-stat-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.cat-stat-lbl {
+  font-size: 9px;
+  color: $cat-dim;
+  width: 56px;
+  flex-shrink: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cat-bar-track {
+  flex: 1;
+  height: 5px;
+  background: rgba(148, 163, 184, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cat-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+
+  &.cat-bar-m { background: $cat-orange; }
+  &.cat-bar-h { background: $cat-brown; }
+}
+
+.cat-stat-val {
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 36px;
+  text-align: right;
+
+  &.cat-val-m { color: $cat-orange; }
+  &.cat-val-h { color: lighten($cat-brown, 15%); }
+}
+
+.cat-brecha {
+  font-size: 10px;
+  color: $cat-dim;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid $cat-border;
+
+  strong {
+    color: $cat-orange;
+    font-weight: 700;
+  }
+}
+
+/* ── Detalle expandido ───────────────────────────────────────────────────── */
+.cat-detail {
+  background: rgba(231, 111, 81, 0.05);
+  border: 1px solid $cat-border-on;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 12px 14px 14px;
+  margin-bottom: 6px;
+  animation: catFadeDown 0.2s ease both;
+}
+
+@keyframes catFadeDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cat-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $cat-border;
+  font-size: 11px;
+  font-weight: 700;
+  color: $cat-text;
+}
+
+.cat-detail-sub {
+  font-size: 10px;
+  color: $cat-dim;
+  font-weight: 400;
+}
+
+/* Lista de actividades en el detalle */
+.cat-act-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.cat-act-row {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.07);
+
+  &:last-child { border-bottom: none; }
+}
+
+.cat-act-name {
+  font-size: 10px;
+  color: $cat-muted;
+  line-height: 1.35;
+}
+
+.cat-act-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cat-act-bar-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cat-act-lbl {
+  font-size: 9px;
+  font-weight: 700;
+  width: 12px;
+  text-align: center;
+  flex-shrink: 0;
+
+  &.cat-act-lbl-f { color: $cat-orange; }
+  &.cat-act-lbl-h { color: lighten($cat-brown, 12%); }
+}
+
+.cat-act-track {
+  flex: 1;
+  height: 4px;
+  background: rgba(148, 163, 184, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cat-act-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+
+  &.cat-act-m { background: $cat-orange; }
+  &.cat-act-h { background: $cat-brown; }
+}
+
+.cat-act-val {
+  font-size: 9px;
+  color: $cat-muted;
+  font-weight: 600;
+  min-width: 22px;
+  text-align: right;
+}
+
+/* Nota al pie del panel */
+.panel-footer-note {
+  font-size: 9px;
+  color: $cat-dim;
+  text-align: center;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid $cat-border;
+  letter-spacing: 0.04em;
 }
