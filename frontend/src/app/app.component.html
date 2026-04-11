@@ -1,14 +1,20 @@
 <div class="dashboard-container">
-  <!-- Título según vista -->
-  <div class="dashboard-header" *ngIf="paisSeleccionado === 'Latam'">
-    <h1>🌎 Trabajo No Remunerado en América Latina</h1>
-    <p>Comparativa regional del trabajo doméstico y de cuidado no remunerado</p>
-    <p class="highlight">💡 Haz clic en cualquier país para explorar sus regiones</p>
+  <!-- Header Mejorado -->
+  <div class="dashboard-header-main">
+    <div class="header-content">
+      <div class="header-text">
+        <h1>El trabajo invisible tiene rostro</h1>
+        <p class="header-subtitle">MAPA DE CUIDADO NO REMUNERADO - AMÉRICA LATINA Y EL CARIBE</p>
+        <button class="header-map-btn">Mapa</button>
+      </div>
+      <div class="header-logos">
+        <img src="assets/images/logo_data4ccion.svg" alt="Dataacción" class="logo">
+        <img src="assets/images/logo_onumujeres.svg" alt="ONU Mujeres" class="logo">
+      </div>
+    </div>
   </div>
-  <div class="dashboard-header" *ngIf="paisSeleccionado !== 'Latam'">
-    <h1>{{ paisSeleccionado }} - Trabajo No Remunerado</h1>
-    <p>Horas semanales promedio dedicadas a trabajo doméstico y de cuidado no remunerado</p>
-  </div>
+
+  <!-- Filtros -->
   <div class="filtros-container">
     <div class="filtro-group">
       <label for="pais">País:</label>
@@ -50,6 +56,35 @@
           [datos]="datosUnidades">
         </app-mapa>
       </div>
+
+        <!-- Leyenda con paleta Dataacción 2026 -->
+  <div class="leyenda">
+    <span><strong>Horas semanales:</strong></span>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #F9D5B4;"></div>
+      <span>Menos de 20 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #F4A261;"></div>
+      <span>20 - 28 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #E76F51;"></div>
+      <span>29 - 36 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #D35400;"></div>
+      <span>37 - 44 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #8C3A2B;"></div>
+      <span>45 - 52 hrs</span>
+    </div>
+    <div class="leyenda-item">
+      <div class="color-box" style="background-color: #5A2C23;"></div>
+      <span>Más de 52 hrs</span>
+    </div>
+  </div>
     </div>
 
     <div class="datos-column">
@@ -89,35 +124,22 @@
     </div>
   </div>
 
-  <!-- Leyenda con paleta Dataacción 2026 -->
-  <div class="leyenda">
-    <span><strong>Horas semanales:</strong></span>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #F9D5B4;"></div>
-      <span>Menos de 20 hrs</span>
+</div>
+
+<!-- Footer -->
+<footer class="dashboard-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <p class="footer-text">Fuentes: <span class="footer-value">ENUT | INEI </span></p>
     </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #F4A261;"></div>
-      <span>20 - 28 hrs</span>
+    <div class="footer-section footer-center">
+      <p class="footer-text">Elaborado por: <span class="footer-value">Yovany Romero, Shirley Sosa, Glisse Jorge, Sihomara Ochoa</span></p>
     </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #E76F51;"></div>
-      <span>29 - 36 hrs</span>
-    </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #D35400;"></div>
-      <span>37 - 44 hrs</span>
-    </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #8C3A2B;"></div>
-      <span>45 - 52 hrs</span>
-    </div>
-    <div class="leyenda-item">
-      <div class="color-box" style="background-color: #5A2C23;"></div>
-      <span>Más de 52 hrs</span>
+    <div class="footer-section footer-right">
+      <p class="footer-text">sunjuywan ruwasja ❤️ - Hecho con el corazón</p>
     </div>
   </div>
-</div>
+</footer>
 
 <app-actividades 
   [visible]="actividadesModalVisible" 

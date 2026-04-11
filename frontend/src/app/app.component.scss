@@ -13,6 +13,111 @@ $palette-dark: #5A2C23;
 $palette-text-dark: #1A0F0A;
 $palette-text-light: #5A4A3E;
 
+.dashboard-header-main {
+  background: #13141A;
+  margin-bottom: 57px;
+}
+
+.header-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  font-size: 14px;
+  color: #cccccc;
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.header-map-btn {
+    background: #F5ECD7;
+    color: #1a1a1a;
+    border: none;
+    /* padding: 10px 25px; */
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 26px;
+    width: 96px;
+
+  &:hover {
+    background: #f0f0f0;
+  }
+}
+
+.header-logos {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  .logo {
+    height: 60px;
+    object-fit: contain;
+  }
+}
+
+/* Footer */
+.dashboard-footer {
+  background: #f5ede2;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-top: 1px solid #e0d5c8;
+}
+
+.footer-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 14px;
+  color: #5a4a3e;
+  line-height: 1.6;
+}
+
+.footer-value {
+  font-weight: 600;
+  color: #1a0f0a;
+}
+
 .dashboard-container {
   max-width: 1600px;
   margin: 0 auto;
@@ -44,7 +149,7 @@ $palette-text-light: #5A4A3E;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-height: 900px;
+  // min-height: 900px;
 }
 
 .panel-label {
@@ -268,7 +373,8 @@ $palette-text-light: #5A4A3E;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   width: 100%;
-  height: 600px;
+  height: 100%;
+  // height: 600px;
   background: #e8e0d8;
 
   :host ::ng-deep #map {
@@ -283,9 +389,8 @@ $palette-text-light: #5A4A3E;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin: 20px 0;
   padding: 15px;
-  background: #f8f9fa;
+  background: #fafaf8;
   border-radius: 6px;
   flex-wrap: wrap;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -348,8 +453,42 @@ $palette-text-light: #5A4A3E;
 }
 
 @media (max-width: 768px) {
+  .dashboard-header-main {
+    padding: 25px 15px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-text h1 {
+    font-size: 32px;
+  }
+
+  .header-logos {
+    justify-content: center;
+    width: 100%;
+
+    .logo {
+      height: 50px;
+    }
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
   .dashboard-container { padding: 15px; }
-  .dashboard-header h1 { font-size: 1.5rem; }
   .filtros-container { flex-direction: column; align-items: center; gap: 15px; }
   .leyenda { gap: 12px; padding: 12px 16px; }
   .leyenda-item span { font-size: 0.7rem; }
