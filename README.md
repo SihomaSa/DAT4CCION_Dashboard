@@ -3,6 +3,7 @@
 
 **Equipo:** Yovany Romero Ramos · Shirley Sosa · Glisse Lisbeth Jorge Malca · Sihomara Ochoa    
 **Evento:** DAT4CCIÓN 2026 · ONU Mujeres América Latina y el Caribe
+**Propósito:** Visibilizar el trabajo invisible de cuidado y cómo afecta e influye en el desarrollo de las mujeres educativo, profesional, económico e inclusive de salud física y emocional
 
 ---
 
